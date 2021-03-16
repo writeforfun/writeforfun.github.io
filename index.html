@@ -71,6 +71,80 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CH4_twoVariables" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/16/CH4_twoVariables/" class="article-date">
+  <time class="dt-published" datetime="2021-03-16T12:36:23.000Z" itemprop="datePublished">2021-03-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/16/CH4_twoVariables/">CH4雙變數分析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>共分散/共變異/Covariance</p>
+<ul>
+<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數 </li>
+<li>定義: <script type="math/tex">s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})</script></li>
+<li><p>也等於: <script type="math/tex">s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}</script></p>
+</li>
+<li><p>證明 <script type="math/tex">\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )\\
+= \sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\
+=\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\
+=\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\
+=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}</script></p>
+</li>
+</ul>
+</li>
+<li><p>相関係数/相關係數/Correlation coefficient</p>
+<ul>
+<li>定義: <script type="math/tex">r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}</script><ul>
+<li>備註: <script type="math/tex">s_{xy}</script>是共分散，<script type="math/tex">s_x, s_y</script>是標準偏差</li>
+</ul>
+</li>
+<li>-1<script type="math/tex">\le</script>相關係數<script type="math/tex">\le</script> 1，但越正或越負不代表絕對有關係</li>
+<li><script type="math/tex">x, y</script>軸的變數互換 <script type="math/tex">r</script> 也不會變</li>
+<li><script type="math/tex">x</script>或<script type="math/tex">y</script>的每個值各加/乘個定值 <script type="math/tex">r</script> 也不會變</li>
+</ul>
+</li>
+<li><p>擬相関/偽關係/Spurious correlation</p>
+<ul>
+<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:<ul>
+<li>人口多導致醫院多</li>
+<li>人口多導致病人多</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/16/CH4_twoVariables/" data-id="ckmc6zesz0001hu3aefjxbddx" data-title="CH4雙變數分析" class="article-share-link">Teilen</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CH5_RegressionLine" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/03/16/CH5_RegressionLine/" class="article-date">
@@ -137,81 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/16/CH5_RegressionLine/" data-id="ckmc6xcbe0001go3a35np1yso" data-title="CH5回歸直線與預測" class="article-share-link">Teilen</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-CH4_twoVariables" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/03/16/CH4_twoVariables/" class="article-date">
-  <time class="dt-published" datetime="2021-03-16T12:36:23.000Z" itemprop="datePublished">2021-03-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/03/16/CH4_twoVariables/">CH4雙變數分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ol>
-<li><p>共分散/共變異/Covariance</p>
-<ul>
-<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數 </li>
-<li>定義: <script type="math/tex">s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})</script></li>
-<li><p>也等於: <script type="math/tex">s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}</script></p>
-</li>
-<li><p>證明 <script type="math/tex">\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )\\
-= \sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\
-=\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\
-=\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\
-=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}</script></p>
-</li>
-</ul>
-</li>
-<li><p>相関係数/相關係數/Correlation coefficient</p>
-<ul>
-<li>定義: <script type="math/tex">r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}</script><ul>
-<li>備註: <script type="math/tex">s_{xy}</script>是共分散，<script type="math/tex">s_x, s_y</script>是標準偏差</li>
-</ul>
-</li>
-<li>-1<script type="math/tex">\le</script>相關係數<script type="math/tex">\le</script> 1，但越正或越負不代表絕對有關係</li>
-<li><script type="math/tex">x, y</script>軸的變數互換 <script type="math/tex">r</script> 也不會變</li>
-<li><script type="math/tex">x</script>或<script type="math/tex">y</script>的每個值各加/乘個定值 <script type="math/tex">r</script> 也不會變</li>
-</ul>
-</li>
-<li><p>擬相関/偽關係/Spurious correlation</p>
-<ul>
-<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:<ul>
-<li>人口多導致醫院多</li>
-<li>人口多導致病人多</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/16/CH4_twoVariables/" data-id="ckmc6xcbf0002go3a88da150n" data-title="CH4雙變數分析" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/16/CH5_RegressionLine/" data-id="ckmc6zet20003hu3agkh5hor6" data-title="CH5回歸直線與預測" class="article-share-link">Teilen</a>
       
       
       
@@ -309,7 +309,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/15/CH3_singleVariable/" data-id="ckmc6xcb70000go3aa5mg2zxc" data-title="CH3單變數分析" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/15/CH3_singleVariable/" data-id="ckmc6zess0000hu3a103l5l82" data-title="CH3單變數分析" class="article-share-link">Teilen</a>
       
       
       
@@ -356,7 +356,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/15/hello-world/" data-id="ckmc6xcbg0003go3a8yn7cfj2" data-title="Hello World" class="article-share-link">Teilen</a>
+      <a data-url="http://example.com/2021/03/15/hello-world/" data-id="ckmc6zet10002hu3ahvs02ee6" data-title="Hello World" class="article-share-link">Teilen</a>
       
       
       
@@ -399,11 +399,11 @@
       <ul>
         
           <li>
-            <a href="/2021/03/16/CH5_RegressionLine/">CH5回歸直線與預測</a>
+            <a href="/2021/03/16/CH4_twoVariables/">CH4雙變數分析</a>
           </li>
         
           <li>
-            <a href="/2021/03/16/CH4_twoVariables/">CH4雙變數分析</a>
+            <a href="/2021/03/16/CH5_RegressionLine/">CH5回歸直線與預測</a>
           </li>
         
           <li>
