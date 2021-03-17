@@ -168,10 +168,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-03-16 21:36:23 / Modified: 23:25:23" itemprop="dateCreated datePublished" datetime="2021-03-16T21:36:23+09:00">2021-03-16</time>
+              <time title="Created: 2021-03-16 21:36:23" itemprop="dateCreated datePublished" datetime="2021-03-16T21:36:23+09:00">2021-03-16</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-17 09:53:35" itemprop="dateModified" datetime="2021-03-17T09:53:35+09:00">2021-03-17</time>
+              </span>
 
           
 
@@ -185,42 +191,93 @@
 
       
           <ol type="1">
-<li><code>$y=\alpha +\beta x$</code>，<code>$\alpha , \beta$</code> 稱為回歸係數 假設 <code>$x,y$</code> 有某種因果關係的前提下，從<code>$x$</code>來預測<code>$y$</code>值稱為回歸分析 (<strong>不能用<code>$y$</code>倒推回<code>$x$</code></strong>)
+<li><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設x,y有某種因果關係的前提下，從x來預測y值稱為回歸分析 (<strong>不能用y倒推回x</strong>)
 <ul>
-<li><code>$x$</code>:説明変数</li>
-<li><code>$y$</code>:非説明変数/目的変数</li>
+<li>x:説明変数</li>
+<li>y:非説明変数/目的変数</li>
 </ul></li>
-<li><p>推定値的 <code>$\alpha , \beta$</code> 為 <code>$\hat&#123;\alpha&#125; , \hat&#123;\beta&#125;$</code>，而預測值的 <code>$y$</code> 就是 <code>$\hat&#123;y&#125;$</code></p></li>
-<li><p>那要怎麼求得 <code>$\hat&#123;\alpha&#125; , \hat&#123;\beta&#125;$</code> 呢? 最小2乗法/最小平方法: 對於每個觀測值<code>$(x_i, y_i)$</code>而言，預測值<code>$\hat&#123;y_i&#125;=\hat&#123;\alpha &#125;+\hat&#123;\beta&#125;x_i$</code></p>
-<p>殘差: <code>$(y_i- \hat&#123;y_i&#125;)$</code>，把每個殘差取平方算總和就稱為<strong>殘差平方和</strong></p>
-<p>定義: <code>$\sum_&#123;i=1&#125;^&#123;n&#125;(y_i-\hat&#123;y_i&#125;)^2$</code>，然後把<code>$\hat&#123;y_i&#125;=\hat&#123;\alpha &#125;+\hat&#123;\beta&#125;x_i$</code>代入此式</p>
-<p>得出: <code>$S(\hat&#123;\alpha&#125;, \hat&#123;\beta&#125;) = \sum_&#123;i=1&#125;^&#123;n&#125;(y_i-\hat&#123;\alpha&#125;-\hat&#123;\beta&#125;x_i)^2$</code></p>
-求殘差平方和的最小值就是求 <code>$\hat&#123;\alpha&#125;, \hat&#123;\beta&#125;$</code>
-<ul>
-<li>證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/h7EkxNO.png" /></li>
-<li>從上面的證明可以得出聯立的<strong>正規方程式</strong>
-<ul>
-<li><code>$\hat&#123;\beta&#125;=\frac&#123;s_&#123;xy&#125;&#125;&#123;s_x^2&#125;=r_&#123;xy&#125;\frac&#123;s_y&#125;&#123;s_x&#125;$</code></li>
-<li><code>$\hat&#123;\alpha&#125;=\bar&#123;y&#125;-\hat&#123;\beta&#125;\bar&#123;x&#125;$</code></li>
-</ul></li>
-</ul></li>
+<li>推定値的 <span class="math inline">\(\alpha , \beta\)</span> 為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>，而預測值的 <span class="math inline">\(y\)</span> 就是 <span class="math inline">\(\hat{y}\)</span></li>
 </ol>
-<p>這樣就可以求回歸方程式了~ (以下表的數據舉例) <img src="https://i.imgur.com/D1oao4k.png" /></p>
-<p><code>$\hat&#123;\beta&#125;=401/73=5.5$</code> <code>$\hat&#123;\alpha&#125;=206-5.5\times 19=101.5$</code></p>
-<p>因此回歸方程式為: <code>$y=101.5+5.5x$</code> 當<code>$x=20$</code>, <code>$\hat&#123;y&#125;=101.5+5.5\times 20=211.5$</code> 備註:不是預測值剛好是211.5，這其實是平均的結果</p>
+<blockquote>
+<p>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢? 3. 最小2乗法/最小平方法 對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和</strong> -&gt; <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span>，然後把<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式 <span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> - 證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/h7EkxNO.png" /> - 從上面的證明可以得出聯立的<strong>正規方程式</strong> - <span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_x^2}=r_{xy}\frac{s_y}{s_x}\)</span> - <span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></p>
+</blockquote>
+<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
+<table>
+<thead>
+<tr class="header">
+<th>次數</th>
+<th>秤砣重量x(g)</th>
+<th>彈簧長度y(mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6</td>
+<td>119</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8</td>
+<td>145</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12</td>
+<td>175</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>14</td>
+<td>191</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>18</td>
+<td>204</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>20</td>
+<td>209</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>24</td>
+<td>244</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>26</td>
+<td>233</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>30</td>
+<td>272</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>32</td>
+<td>268</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
+<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span> 備註:不是預測值剛好是211.5，這其實是平均的結果</p>
 <ol start="4" type="1">
 <li>決定係數
 <ul>
-<li>総平方和:y的離散程度 <code>$S_T=\sum_&#123;i=1&#125;^&#123;n&#125;(y_i-\bar&#123;y&#125;)^2$</code></li>
-<li>回帰による平方和:回歸直線能說明的部分 <code>$S_R=\sum_&#123;i=1&#125;^&#123;n&#125;(\hat&#123;y_i&#125;-\bar&#123;y&#125;)^2$</code></li>
-<li>残差平方和:回歸直線不能說明的部分 <code>$S_e=\sum_&#123;i=1&#125;^&#123;n&#125;(y_i-\hat&#123;y_i&#125;)^2$</code></li>
+<li>総平方和:y的離散程度 <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
+<li>回帰による平方和:回歸直線能說明的部分 <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
+<li>残差平方和:回歸直線不能說明的部分 <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
 </ul>
-<code>$S_T=S_R+Se$</code> 決定係數<code>$R^2=\frac&#123;S_R&#125;&#123;S_T&#125;$</code>
+<span class="math inline">\(S_T=S_R+Se\)</span> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span>
 <ul>
-<li>在回歸直線的情況下: <code>$R^2=r^2$</code> (決定係數平方=相關係數平方)</li>
+<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
 <li>二次曲線之類的就沒有上述的特性</li>
 </ul>
-重相関係数: 決定係數的正平方根<code>$R$</code> 意義: 觀測值<code>$y_i$</code>跟預測值<code>$\hat&#123;y_i&#125;$</code>的相關係數</li>
+重相関係数: 決定係數的正平方根<span class="math inline">\(R\)</span> 意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
 </ol>
 
       
@@ -363,7 +420,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-16 23:06:34" itemprop="dateModified" datetime="2021-03-16T23:06:34+09:00">2021-03-16</time>
+                <time title="Modified: 2021-03-17 09:53:58" itemprop="dateModified" datetime="2021-03-17T09:53:58+09:00">2021-03-17</time>
               </span>
 
           
@@ -378,58 +435,50 @@
 
       
           <ol start="0" type="1">
-<li>平均値/平均值/Mean
-<ul>
-<li>定義: <code>$\bar&#123;x&#125; = \frac&#123;x_1+x_2+...+x_n&#125;&#123;n&#125;= \frac&#123;\sum_&#123;i=1&#125;^&#123;n&#125;x_i&#125;&#123;n&#125;$</code></li>
-<li>補充: <code>$(\sum_&#123;i=1&#125;^&#123;n&#125;x_i=n\bar&#123;x&#125;)$</code></li>
-</ul></li>
+<li>平均値/平均值/Mean <span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span></li>
 <li>中央值/中位數/Median
 <ul>
 <li>特性:不受外れ値(離群值)影響</li>
-<li>奇數個觀測值:<code>$x_&#123;(n+1)/2&#125;$</code></li>
-<li>偶數個觀測值:<code>$(x_&#123;n/2&#125; + x_&#123;(n/2+1)&#125;)/2$</code></li>
+<li>奇數個觀測值:<span class="math inline">\(x_{(n+1)/2}\)</span></li>
+<li>偶數個觀測值:<span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
 </ul></li>
 <li>偏差/誤差/Deviation
 <ul>
-<li>定義:觀測值 - 平均值 = <code>$x_i - \bar&#123;x&#125;$</code></li>
+<li>定義:觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
 <li>意義:值越大表示散らばり越大</li>
-<li>偏差的總和為0: <code>$\sum_&#123;i=1&#125;^&#123;n&#125; &#123;(x_i-\bar&#123;x&#125;)&#125;=\sum_&#123;i=1&#125;^&#123;n&#125; &#123;x_i-n\bar&#123;x&#125;&#125;= n\bar&#123;x&#125;-n\bar&#123;x&#125;=0$</code> (<code>$x_i$</code>的總和=<code>$n\bar&#123;x&#125;$</code>)</li>
+<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
 <li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
 </ul></li>
 <li>平均偏差
 <ul>
-<li>定義:<code>$\frac&#123;1&#125;&#123;n&#125;\sum_&#123;i=1&#125;^&#123;n&#125;\left | x_i-\bar&#123;x&#125;  \right |$</code></li>
+<li>定義:<span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
 </ul></li>
 <li>分散/變異數/Variance
 <ul>
-<li>通常記為<code>$s^2$</code></li>
-<li>定義:<code>$s^2=\frac&#123;1&#125;&#123;n&#125;\sum_&#123;i=1&#125;^&#123;n&#125;(x_i-\bar&#123;x&#125;)^2$</code></li>
-<li>因為<code>$\sum_&#123;i=1&#125;^&#123;n&#125;(x_i-\bar&#123;x&#125;)^2=\sum_&#123;i=1&#125;^&#123;n&#125;x_i^2-n\bar&#123;x&#125;^2$</code></li>
-<li><code>$s^2$</code>又= <code>$\sum_&#123;i=1&#125;^&#123;n&#125;\frac&#123;x_i^2&#125;&#123;n&#125;-\bar&#123;x&#125;^2$</code></li>
-<li>證明: <span class="math display">\[\sum_{i=1}^{n}(x_i-\bar{x})^2\\
-= \sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\
-=\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+\sum_{i=1}^{n}\bar{x}^2\\
-=\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x}+n\bar{x}^2\\
-=\sum_{i=1}^{n}x_i^2 - n\bar{x}^2\]</span></li>
+<li>通常記為<span class="math inline">\(s^2\)</span></li>
+<li>定義:<span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
+<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
+<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span></li>
+<li>證明: <span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2\\ = \sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\ =\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\ =\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\ =\sum_{i=1}^{n}x_i^2 - n\bar{x}^2\)</span></li>
 </ul></li>
 <li>標準偏差/標準差/Standard deviation
 <ul>
-<li>通常記為<code>$s$</code> 或 <code>$\sigma$</code>，就是分散開根號取正</li>
-<li><code>$s=\sqrt&#123;\frac&#123;1&#125;&#123;n&#125;\sum_&#123;i=1&#125;^&#123;n&#125;(x_i-\bar&#123;x&#125;)^2&#125;$</code></li>
+<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
+<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
 </ul></li>
 <li>標準化/Standardization
 <ul>
 <li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
 <li>標準化後:平均值=0，標準差=1</li>
-<li><code>$z_i=\frac&#123;觀測值-平均值&#125;&#123;標準差&#125;=\frac&#123;x_i-\bar&#123;x&#125;&#125;&#123;s&#125;$</code></li>
+<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
 <li>偏差值
 <ul>
-<li><code>$50 + 10\times\frac&#123;分數-平均分數&#125;&#123;分數的標準差&#125;=50+10&#123;z_i&#125;$</code></li>
+<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
 </ul></li>
 </ul></li>
 <li>変動係数/變異係數/Coefficient of variation
 <ul>
-<li><code>$cv=s/\bar&#123;x&#125;$</code></li>
+<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
 <li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。
 <ul>
 <li>例題:某公司的管理職平均年收2000萬，標準差200萬； 打工仔的平均年收100萬，標準差30萬。 <span style="color:red">單看標準差的話會覺得是管理職年收的離散程度較大。</span> 實際用cv算一次: 管理職=200/2000=0.1 打工仔=30/100=0.3 發現打工仔的年收更離散～</li>
