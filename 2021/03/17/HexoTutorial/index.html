@@ -28,7 +28,7 @@
 <meta property="og:description" content="Writing &amp; Organizing Content  創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts 1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b 在瀏覽器預覽draft檔案 1$ hexo server --draft">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-17T05:44:25.000Z">
-<meta property="article:modified_time" content="2021-03-17T07:29:34.031Z">
+<meta property="article:modified_time" content="2021-03-17T08:07:46.286Z">
 <meta property="article:author" content="Chang Yuan">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-03-17 14:44:25 / Modified: 16:29:34" itemprop="dateCreated datePublished" datetime="2021-03-17T14:44:25+09:00">2021-03-17</time>
+              <time title="Created: 2021-03-17 14:44:25 / Modified: 17:07:46" itemprop="dateCreated datePublished" datetime="2021-03-17T14:44:25+09:00">2021-03-17</time>
             </span>
 
           
@@ -209,6 +209,7 @@
 </ul>
 <p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
 <h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [統計檢定3級, 基本統計量, 單變數]</span><br><span class="line">categories:</span><br><span class="line">- [統計檢定, CH3]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
 
     </div>
 
@@ -227,10 +228,7 @@
     <a href="/2021/03/16/CH4_twoVariables/" rel="prev" title="CH4雙變數分析">
       <i class="fa fa-chevron-left"></i> CH4雙變數分析
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/03/17/yuan-test/" rel="next" title="yuan_test">
-      yuan_test <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -303,9 +301,19 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
