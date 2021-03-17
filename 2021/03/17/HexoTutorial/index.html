@@ -20,22 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="\(y&#x3D;\alpha +\beta x\)，\(\alpha , \beta\) 稱為回歸係數 假設x,y有某種因果關係的前提下，從x來預測y值稱為回歸分析 (不能用y倒推回x)  x:説明変数 y:非説明変数&#x2F;目的変数  推定値的 \(\alpha , \beta\) 為 \(\hat{\alpha} , \hat{\beta}\)，而預測值的 \(y\) 就是 \(\hat{y}\)   那">
+  <meta name="description" content="Writing &amp; Organizing Content  創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts 1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b 在瀏覽器預覽draft檔案 1$ hexo server --draft">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CH5回歸直線與預測">
-<meta property="og:url" content="http://example.com/2021/03/16/CH5_RegressionLine/index.html">
+<meta property="og:title" content="Hexo tutorial">
+<meta property="og:url" content="http://example.com/2021/03/17/HexoTutorial/index.html">
 <meta property="og:site_name" content="YuanBlog">
-<meta property="og:description" content="\(y&#x3D;\alpha +\beta x\)，\(\alpha , \beta\) 稱為回歸係數 假設x,y有某種因果關係的前提下，從x來預測y值稱為回歸分析 (不能用y倒推回x)  x:説明変数 y:非説明変数&#x2F;目的変数  推定値的 \(\alpha , \beta\) 為 \(\hat{\alpha} , \hat{\beta}\)，而預測值的 \(y\) 就是 \(\hat{y}\)   那">
+<meta property="og:description" content="Writing &amp; Organizing Content  創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts 1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b 在瀏覽器預覽draft檔案 1$ hexo server --draft">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://i.imgur.com/CpnbFPR.png">
-<meta property="og:image" content="https://i.imgur.com/h7EkxNO.png">
-<meta property="article:published_time" content="2021-03-16T12:36:23.000Z">
-<meta property="article:modified_time" content="2021-03-17T00:53:35.493Z">
+<meta property="article:published_time" content="2021-03-17T05:44:25.000Z">
+<meta property="article:modified_time" content="2021-03-17T07:29:34.031Z">
 <meta property="article:author" content="Chang Yuan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/CpnbFPR.png">
 
-<link rel="canonical" href="http://example.com/2021/03/16/CH5_RegressionLine/">
+<link rel="canonical" href="http://example.com/2021/03/17/HexoTutorial/">
 
 
 <script id="page-configurations">
@@ -48,7 +45,7 @@
   };
 </script>
 
-  <title>CH5回歸直線與預測 | YuanBlog</title>
+  <title>Hexo tutorial | YuanBlog</title>
   
 
 
@@ -153,7 +150,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/16/CH5_RegressionLine/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/17/HexoTutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -166,7 +163,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CH5回歸直線與預測
+          Hexo tutorial
         </h1>
 
         <div class="post-meta">
@@ -175,16 +172,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-03-16 21:36:23" itemprop="dateCreated datePublished" datetime="2021-03-16T21:36:23+09:00">2021-03-16</time>
+              <time title="Created: 2021-03-17 14:44:25 / Modified: 16:29:34" itemprop="dateCreated datePublished" datetime="2021-03-17T14:44:25+09:00">2021-03-17</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-17 09:53:35" itemprop="dateModified" datetime="2021-03-17T09:53:35+09:00">2021-03-17</time>
-              </span>
 
           
 
@@ -197,95 +188,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ol type="1">
-<li><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設x,y有某種因果關係的前提下，從x來預測y值稱為回歸分析 (<strong>不能用y倒推回x</strong>)
+        <h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
 <ul>
-<li>x:説明変数</li>
-<li>y:非説明変数/目的変数</li>
-</ul></li>
-<li>推定値的 <span class="math inline">\(\alpha , \beta\)</span> 為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>，而預測值的 <span class="math inline">\(y\)</span> 就是 <span class="math inline">\(\hat{y}\)</span></li>
-</ol>
-<blockquote>
-<p>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢? 3. 最小2乗法/最小平方法 對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和</strong> -&gt; <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span>，然後把<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式 <span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> - 證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/h7EkxNO.png" /> - 從上面的證明可以得出聯立的<strong>正規方程式</strong> - <span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_x^2}=r_{xy}\frac{s_y}{s_x}\)</span> - <span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></p>
-</blockquote>
-<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
-<table>
-<thead>
-<tr class="header">
-<th>次數</th>
-<th>秤砣重量x(g)</th>
-<th>彈簧長度y(mm)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>6</td>
-<td>119</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>8</td>
-<td>145</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>12</td>
-<td>175</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>14</td>
-<td>191</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>18</td>
-<td>204</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>20</td>
-<td>209</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>24</td>
-<td>244</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>26</td>
-<td>233</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>30</td>
-<td>272</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>32</td>
-<td>268</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
-<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span> 備註:不是預測值剛好是211.5，這其實是平均的結果</p>
-<ol start="4" type="1">
-<li>決定係數
-<ul>
-<li>総平方和:y的離散程度 <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
-<li>回帰による平方和:回歸直線能說明的部分 <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
-<li>残差平方和:回歸直線不能說明的部分 <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
+<li><p>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></p></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
 </ul>
-<span class="math inline">\(S_T=S_R+Se\)</span> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span>
+<h2 id="scaffolds">Scaffolds</h2>
 <ul>
-<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
-<li>二次曲線之類的就沒有上述的特性</li>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<ul>
+<li>draft.md</li>
+<li>page.md</li>
+<li>post.md</li>
 </ul>
-重相関係数: 決定係數的正平方根<span class="math inline">\(R\)</span> 意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
-</ol>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</ul>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
 
     </div>
 
@@ -301,12 +224,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/15/CH3_singleVariable/" rel="prev" title="CH3單變數分析">
-      <i class="fa fa-chevron-left"></i> CH3單變數分析
+    <a href="/2021/03/16/CH4_twoVariables/" rel="prev" title="CH4雙變數分析">
+      <i class="fa fa-chevron-left"></i> CH4雙變數分析
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/16/CH4_twoVariables/" rel="next" title="CH4雙變數分析">
-      CH4雙變數分析 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/17/yuan-test/" rel="next" title="yuan_test">
+      yuan_test <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -366,6 +289,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#writing-organizing-content"><span class="nav-number">1.</span> <span class="nav-text">Writing &amp; Organizing Content</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scaffolds"><span class="nav-number">2.</span> <span class="nav-text">Scaffolds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-categories"><span class="nav-number">3.</span> <span class="nav-text">Tags &amp; Categories</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -466,59 +390,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
