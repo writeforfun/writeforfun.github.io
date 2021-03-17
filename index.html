@@ -145,6 +145,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/16/CH4_twoVariables/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chang Yuan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuanBlog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/16/CH4_twoVariables/" class="post-title-link" itemprop="url">CH4雙變數分析</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-03-16 21:36:23" itemprop="dateCreated datePublished" datetime="2021-03-16T21:36:23+09:00">2021-03-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-17 09:47:56" itemprop="dateModified" datetime="2021-03-17T09:47:56+09:00">2021-03-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol type="1">
+<li>共分散/共變異/Covariance
+<ul>
+<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
+<li><span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
+<li><span class="math inline">\(s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span></li>
+<li>證明 <span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )\\ = \sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\ =\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y} \\ =\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\ =\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span></li>
+</ul></li>
+<li>相関係数/相關係數/Correlation coefficient
+<ul>
+<li><span class="math inline">\(r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}\)</span>
+<ul>
+<li>備註: <span class="math inline">\(s_{xy}\)</span>是共分散，<span class="math inline">\(s_x, s_y\)</span>是標準偏差</li>
+</ul></li>
+<li>-1<span class="math inline">\(\le\)</span>相關係數<span class="math inline">\(\le\)</span> 1，但越正或越負不代表絕對有關係</li>
+<li><span class="math inline">\(x, y\)</span>軸的變數互換 <span class="math inline">\(r\)</span> 也不會變</li>
+<li><span class="math inline">\(x\)</span>或<span class="math inline">\(y\)</span>的每個值各加/乘個定值 <span class="math inline">\(r\)</span> 也不會變</li>
+</ul></li>
+<li>擬相関/偽關係/Spurious correlation
+<ul>
+<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:
+<ul>
+<li>人口多導致醫院多</li>
+<li>人口多導致病人多</li>
+</ul></li>
+</ul></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/16/CH5_RegressionLine/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -221,101 +312,6 @@
 <li>二次曲線之類的就沒有上述的特性</li>
 </ul>
 重相関係数: 決定係數的正平方根<code>$R$</code> 意義: 觀測值<code>$y_i$</code>跟預測值<code>$\hat&#123;y_i&#125;$</code>的相關係數</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/16/CH4_twoVariables/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Chang Yuan">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="YuanBlog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/16/CH4_twoVariables/" class="post-title-link" itemprop="url">CH4雙變數分析</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2021-03-16 21:36:23" itemprop="dateCreated datePublished" datetime="2021-03-16T21:36:23+09:00">2021-03-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-17 02:10:54" itemprop="dateModified" datetime="2021-03-17T02:10:54+09:00">2021-03-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol type="1">
-<li>共分散/共變異/Covariance
-<ul>
-<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
-<li>定義: <span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
-<li><p>也等於: <code>$s_&#123;xy&#125;=\sum_&#123;i=1&#125;^&#123;n&#125;x_iy_i - n\bar&#123;x&#125;\bar&#123;y&#125;$</code></p></li>
-<li>證明 <span class="math display">\[\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )\\
-= \sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\
-=\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\
-=\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\
-=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\]</span></li>
-</ul></li>
-<li>相関係数/相關係數/Correlation coefficient
-<ul>
-<li>定義: <code>$r=\frac&#123;s_&#123;xy&#125;&#125;&#123;s_xs_y&#125;=\frac&#123;\frac&#123;1&#125;&#123;n&#125;\sum_&#123;i=1&#125;^&#123;n&#125;(x_i-\bar&#123;x&#125;)(y_i-\bar&#123;y&#125; )&#125;&#123;\sqrt[]&#123;\frac&#123;1&#125;&#123;n&#125;\sum_&#123;i=1&#125;^&#123;n&#125;(x_i-\bar&#123;x&#125;)^2&#125; \sqrt[]&#123;\frac&#123;1&#125;&#123;n&#125;\sum_&#123;i=1&#125;^&#123;n&#125;(y_i-\bar&#123;y&#125;)^2&#125;&#125;$</code>
-<ul>
-<li>備註: <code>$s_&#123;xy&#125;$</code>是共分散，<code>$s_x, s_y$</code>是標準偏差</li>
-</ul></li>
-<li>-1<code>$\le$</code>相關係數<code>$\le$</code> 1，但越正或越負不代表絕對有關係</li>
-<li><code>$x, y$</code>軸的變數互換 <code>$r$</code> 也不會變</li>
-<li><code>$x$</code>或<code>$y$</code>的每個值各加/乘個定值 <code>$r$</code> 也不會變</li>
-</ul></li>
-<li>擬相関/偽關係/Spurious correlation
-<ul>
-<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:
-<ul>
-<li>人口多導致醫院多</li>
-<li>人口多導致病人多</li>
-</ul></li>
-</ul></li>
 </ol>
 
       
