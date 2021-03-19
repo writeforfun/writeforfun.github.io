@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>CH3單變數分析</title>
+    <url>/2021/03/15/CH3_singleVariable/</url>
+    <content><![CDATA[<ol start="0" type="1">
+<li>平均値/平均值/Mean <span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span> <span id="more"></span></li>
+<li>中央值/中位數/Median
+<ul>
+<li>特性:不受外れ値(離群值)影響</li>
+<li>奇數個觀測值:<span class="math inline">\(x_{(n+1)/2}\)</span></li>
+<li>偶數個觀測值:<span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
+</ul></li>
+<li>偏差/誤差/Deviation
+<ul>
+<li>定義:觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
+<li>意義:值越大表示散らばり越大</li>
+<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
+<li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
+</ul></li>
+<li>平均偏差
+<ul>
+<li>定義:<span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
+</ul></li>
+<li>分散/變異數/Variance
+<ul>
+<li>通常記為<span class="math inline">\(s^2\)</span></li>
+<li>定義:<span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
+<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
+<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span></li>
+<li>證明yo: <span class="math display">\[\begin{eqnarray*}
+\sum_{i=1}^{n}(x_i-\bar{x})^2&amp;=&amp;\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
+&amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
+&amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
+&amp;=&amp;\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
+\end{eqnarray*}\]</span></li>
+</ul></li>
+<li>標準偏差/標準差/Standard deviation
+<ul>
+<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
+<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
+</ul></li>
+<li>標準化/Standardization
+<ul>
+<li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
+<li>標準化後:平均值=0，標準差=1</li>
+<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
+<li>偏差值
+<ul>
+<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
+</ul></li>
+</ul></li>
+<li>変動係数/變異係數/Coefficient of variation
+<ul>
+<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
+<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。
+<ul>
+<li>例題:某公司的管理職平均年收2000萬，標準差200萬； 打工仔的平均年收100萬，標準差30萬。 <span style="color:red">單看標準差的話會覺得是管理職年收的離散程度較大。</span> 實際用cv算一次: 管理職=200/2000=0.1 打工仔=30/100=0.3 發現打工仔的年收更離散～</li>
+</ul></li>
+</ul></li>
+</ol>
+<p><strong>練習題</strong> <img src="https://i.imgur.com/E2I7RzU.png" /></p>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>CH3</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>基本統計量</tag>
+        <tag>單變數</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CH4雙變數分析</title>
+    <url>/2021/03/16/CH4_twoVariables/</url>
+    <content><![CDATA[<ol type="1">
+<li>共分散/共變異/Covariance
+<ul>
+<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
+<li><span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
+<li><span class="math inline">\(s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span></li>
+<li>證明: <span class="math display">\[\begin{eqnarray*}
+\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&amp;=&amp;\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
+&amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
+&amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
+&amp;=&amp;\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
+\end{eqnarray*}\]</span> <span id="more"></span></li>
+</ul></li>
+<li>相関係数/相關係數/Correlation coefficient
+<ul>
+<li><span class="math inline">\(r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}\)</span>
+<ul>
+<li>備註: <span class="math inline">\(s_{xy}\)</span>是共分散，<span class="math inline">\(s_x, s_y\)</span>是標準偏差</li>
+</ul></li>
+<li>-1<span class="math inline">\(\le\)</span>相關係數<span class="math inline">\(\le\)</span> 1，但越正或越負不代表絕對有關係</li>
+<li><span class="math inline">\(x, y\)</span>軸的變數互換 <span class="math inline">\(r\)</span> 也不會變</li>
+<li><span class="math inline">\(x\)</span>或<span class="math inline">\(y\)</span>的每個值各加/乘個定值 <span class="math inline">\(r\)</span> 也不會變</li>
+</ul></li>
+<li>擬相関/偽關係/Spurious correlation
+<ul>
+<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:
+<ul>
+<li>人口多導致醫院多</li>
+<li>人口多導致病人多</li>
+</ul></li>
+</ul></li>
+</ol>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>CH4</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>雙變數</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CH5回歸直線與預測</title>
+    <url>/2021/03/16/CH5_RegressionLine/</url>
+    <content><![CDATA[<ol type="1">
+<li><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設x,y有某種因果關係的前提下，從x來預測y值稱為回歸分析 (<strong>不能用y倒推回x</strong>)
+<ul>
+<li>x:説明変数</li>
+<li>y:非説明変数/目的変数 <span id="more"></span></li>
+</ul></li>
+<li>推定値的 <span class="math inline">\(\alpha , \beta\)</span> 為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>，而預測值的 <span class="math inline">\(y\)</span> 就是 <span class="math inline">\(\hat{y}\)</span></li>
+</ol>
+<blockquote>
+<p>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢? 3. 最小2乗法/最小平方法 對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和</strong> -&gt; <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span>，然後把<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式 <span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> - 證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/h7EkxNO.png" /> - 從上面的證明可以得出聯立的<strong>正規方程式</strong> - <span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_x^2}=r_{xy}\frac{s_y}{s_x}\)</span> - <span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></p>
+</blockquote>
+<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
+<table>
+<thead>
+<tr class="header">
+<th>次數</th>
+<th>秤砣重量x(g)</th>
+<th>彈簧長度y(mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6</td>
+<td>119</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8</td>
+<td>145</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12</td>
+<td>175</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>14</td>
+<td>191</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>18</td>
+<td>204</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>20</td>
+<td>209</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>24</td>
+<td>244</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>26</td>
+<td>233</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>30</td>
+<td>272</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>32</td>
+<td>268</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
+<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span> 備註:不是預測值剛好是211.5，這其實是平均的結果</p>
+<ol start="4" type="1">
+<li>決定係數
+<ul>
+<li>総平方和:y的離散程度 <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
+<li>回帰による平方和:回歸直線能說明的部分 <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
+<li>残差平方和:回歸直線不能說明的部分 <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
+</ul>
+<span class="math inline">\(S_T=S_R+Se\)</span> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span>
+<ul>
+<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
+<li>二次曲線之類的就沒有上述的特性</li>
+</ul>
+重相関係数: 決定係數的正平方根<span class="math inline">\(R\)</span> 意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
+</ol>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>CH5</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>回歸直線</tag>
+        <tag>回歸係數</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo tutorial</title>
+    <url>/2021/03/17/HexoTutorial/</url>
+    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
+<ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="scaffolds">Scaffolds</h2>
+<ul>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<ul>
+<li>draft.md</li>
+<li>page.md</li>
+<li>post.md</li>
+</ul>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</ul>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="tag-plugins">Tag Plugins</h2>
+<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>JLPT零基礎到N1自學心得</title>
+    <url>/2021/03/17/JLPT/</url>
+    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
+<p>大概就這樣～哈</p>
+]]></content>
+      <categories>
+        <category>日文</category>
+        <category>JLPT</category>
+      </categories>
+      <tags>
+        <tag>JLPT</tag>
+        <tag>日檢</tag>
+        <tag>大家的日本語</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>json筆記</title>
+    <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
+<h2 id="簡介">簡介</h2>
+<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在:<br> <span id="more"></span></p>
+<ul>
+<li>換行的時候json要加逗號而yaml不用</li>
+<li>json的key要加雙引號</li>
+</ul>
+<h2 id="寫法">寫法</h2>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>可用縮排把上述資料包進person這object裡面
+<ul>
+<li>呼叫方式: person.gpa</li>
+</ul></li>
+<li>[]裡面可以存:
+<ul>
+<li>單變數像hobbies: [xx, xx, xx]</li>
+<li>多變數像friends: [{xx, xx}, {xx, xx}]</li>
+</ul></li>
+<li>記得要逗號~</li>
+</ul>
+<h2 id="參考來源">參考來源</h2>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>data</category>
+      </categories>
+      <tags>
+        <tag>json</tag>
+        <tag>JavaScriptObjectNotation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>yaml筆記</title>
+    <url>/2021/03/19/yaml%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，想說來了解一下它所以就做了這篇簡短的筆記。</p>
+<h2 id="簡介">簡介</h2>
+<p>yaml簡寫yml唸作<strong>耶某</strong>，很像json很好懂。<br> 副檔名: .yaml or .yml <span id="more"></span></p>
+<h2 id="寫法">寫法</h2>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 這是註解</span></span><br><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&quot;Yuan&quot;</span></span><br><span class="line">  <span class="attr">occupation:</span> <span class="string">&quot;Incoming Yahooer&quot;</span>  </span><br><span class="line">  <span class="attr">age:</span> <span class="type">!!float</span> <span class="number">26</span> <span class="comment"># 26.0</span></span><br><span class="line">  <span class="attr">birthday:</span> <span class="number">1994-09-22 15:00:00</span> <span class="comment"># ISO 8601</span></span><br><span class="line">  <span class="attr">gpa:</span> <span class="type">!!str</span> <span class="number">3.2</span> <span class="comment"># &quot;3.2&quot;</span></span><br><span class="line">  <span class="attr">favriate number:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">male:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">flaws:</span> <span class="literal">null</span></span><br><span class="line">  <span class="attr">hobbies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;guitar&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;coding&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;statistics&quot;</span></span><br><span class="line">  <span class="attr">fruits:</span> [<span class="string">&quot;mango&quot;</span>, <span class="string">&quot;apple&quot;</span>]</span><br><span class="line">  <span class="attr">friends:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;Anger&quot;</span></span><br><span class="line">      <span class="attr">age:</span> <span class="number">25</span></span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">&quot;Book&quot;</span>, <span class="attr">age:</span> <span class="number">25</span>&#125;</span><br><span class="line">    <span class="bullet">-</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">&quot;NaYue&quot;</span></span><br><span class="line">      <span class="attr">age:</span> <span class="number">24</span></span><br><span class="line">  <span class="attr">decription:</span> <span class="string">&gt;</span></span><br><span class="line">    <span class="string">Study</span> <span class="string">in</span> <span class="string">Tokyo</span> <span class="string">now.</span></span><br><span class="line">    <span class="string">Recently</span> <span class="string">built</span> <span class="string">a</span> <span class="string">blog</span> <span class="string">with</span> <span class="string">hexo</span> <span class="string">and</span> <span class="string">gitpage</span></span><br><span class="line">    <span class="string">like</span> <span class="string">what</span> <span class="string">you</span> <span class="string">see</span> <span class="string">here.</span> </span><br><span class="line">  <span class="attr">signature:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">Yuan</span></span><br><span class="line">    <span class="string">Waseda</span> <span class="string">University</span></span><br><span class="line">    <span class="attr">email:</span> <span class="string">howlen0319@gmail.com</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>可用縮排把上述資料包進person這object裡面
+<ul>
+<li>呼叫方式: person.gpa</li>
+</ul></li>
+<li>!!可以強制轉型</li>
+<li>hobbies的寫法跟fruits互通</li>
+<li>friends下的三種寫法互通，都會被存成list</li>
+<li>decription後面的&gt;，可以讓分段的文字被存成一行(分行之類的format不會被保存)</li>
+<li>相反的，signature後面的|可以讓format被保存下來</li>
+</ul>
+<h2 id="進階寫法">進階寫法</h2>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&amp;name_var</span> <span class="string">&quot;Yuan&quot;</span> <span class="comment">#&amp;後面的字不一定要跟key一樣</span></span><br><span class="line"><span class="attr">id:</span> <span class="meta">*name</span></span><br><span class="line"></span><br><span class="line"><span class="attr">base:</span> <span class="meta">&amp;base</span></span><br><span class="line">  <span class="attr">var1:</span> <span class="string">value1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">foo:</span></span><br><span class="line">  <span class="attr">foo_var1:</span> <span class="string">*base</span> <span class="comment"># var1: value1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>id透過*可以存取name_var也就是&quot;Yuan&quot;</li>
+<li>*也可以存取整個key-value pair
+<ul>
+<li>例如foo的寫法</li>
+</ul></li>
+</ul>
+<h2 id="參考來源">參考來源</h2>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/cdLNKUoMc6c" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>data</category>
+      </categories>
+      <tags>
+        <tag>yaml</tag>
+        <tag>yml</tag>
+      </tags>
+  </entry>
+</search>
