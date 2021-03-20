@@ -52,7 +52,7 @@
 <h3 id="変動係数變異係數coefficient-of-variation">変動係数/變異係數/Coefficient of Variation</h3>
 <ul>
 <li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
-<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
+<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br> 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
 </ul>
 <h2 id="練習題">練習題</h2>
 <p><img src="https://i.imgur.com/E2I7RzU.png" /></p>
@@ -219,6 +219,24 @@
       </tags>
   </entry>
   <entry>
+    <title>JLPT零基礎到N1自學心得</title>
+    <url>/2021/03/17/JLPT/</url>
+    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
+<p>大概就這樣～哈</p>
+]]></content>
+      <categories>
+        <category>日文</category>
+        <category>JLPT</category>
+      </categories>
+      <tags>
+        <tag>JLPT</tag>
+        <tag>日檢</tag>
+        <tag>大家的日本語</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo tutorial</title>
     <url>/2021/03/17/HexoTutorial/</url>
     <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
@@ -253,24 +271,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>gitpage</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JLPT零基礎到N1自學心得</title>
-    <url>/2021/03/17/JLPT/</url>
-    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
-<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
-<p>大概就這樣～哈</p>
-]]></content>
-      <categories>
-        <category>日文</category>
-        <category>JLPT</category>
-      </categories>
-      <tags>
-        <tag>JLPT</tag>
-        <tag>日檢</tag>
-        <tag>大家的日本語</tag>
       </tags>
   </entry>
   <entry>
