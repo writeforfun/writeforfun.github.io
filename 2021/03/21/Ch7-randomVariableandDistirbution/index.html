@@ -21,19 +21,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="學歷 早稻田大學">
-<meta property="og:type" content="website">
-<meta property="og:title" content="關於我">
-<meta property="og:url" content="http://example.com/aboutme/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="Ch7隨機變數與機率分布">
+<meta property="og:url" content="http://example.com/2021/03/21/Ch7-randomVariableandDistirbution/index.html">
 <meta property="og:site_name" content="YuanDaily">
-<meta property="og:description" content="學歷 早稻田大學">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2021-03-17T05:57:02.000Z">
-<meta property="article:modified_time" content="2021-03-17T06:01:53.652Z">
+<meta property="article:published_time" content="2021-03-21T14:13:36.000Z">
+<meta property="article:modified_time" content="2021-03-21T14:16:14.547Z">
 <meta property="article:author" content="Yuan">
+<meta property="article:tag" content="隨機變數">
+<meta property="article:tag" content="二項分布">
+<meta property="article:tag" content="常態分布">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/aboutme/">
+<link rel="canonical" href="http://example.com/2021/03/21/Ch7-randomVariableandDistirbution/">
 
 
 <script id="page-configurations">
@@ -41,13 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-TW'
   };
 </script>
 
-  <title>關於我 | YuanDaily
-</title>
+  <title>Ch7隨機變數與機率分布 | YuanDaily</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HB8S8W27TQ"></script>
     <script>
@@ -169,45 +169,105 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-TW">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/21/Ch7-randomVariableandDistirbution/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Yuan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="YuanDaily">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Ch7隨機變數與機率分布
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">關於我
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
 
-<div class="post-meta">
+              <time title="創建時間：2021-03-21 23:13:36 / 修改時間：23:16:14" itemprop="dateCreated datePublished" datetime="2021-03-21T23:13:36+09:00">2021-03-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%B5%B1%E8%A8%88%E6%AA%A2%E5%AE%9A/" itemprop="url" rel="index"><span itemprop="name">統計檢定</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%B5%B1%E8%A8%88%E6%AA%A2%E5%AE%9A/Ch7/" itemprop="url" rel="index"><span itemprop="name">Ch7</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="閱讀次數" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">閱讀次數：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%9A%A8%E6%A9%9F%E8%AE%8A%E6%95%B8/" rel="tag"># 隨機變數</a>
+              <a href="/tags/%E4%BA%8C%E9%A0%85%E5%88%86%E5%B8%83/" rel="tag"># 二項分布</a>
+              <a href="/tags/%E5%B8%B8%E6%85%8B%E5%88%86%E5%B8%83/" rel="tag"># 常態分布</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/19/json%E7%AD%86%E8%A8%98/" rel="prev" title="json筆記">
+      <i class="fa fa-chevron-left"></i> json筆記
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          <h3 id="學歷">學歷</h3>
-<p>早稻田大學</p>
-
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -258,7 +318,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%B8%E6%AD%B7"><span class="nav-number">1.</span> <span class="nav-text">學歷</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
