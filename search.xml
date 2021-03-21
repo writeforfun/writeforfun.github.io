@@ -195,7 +195,7 @@
 </tbody>
 </table>
 <p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span><br> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
-<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
+<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span><br> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
 <h3 id="決定係数決定係數coefficient-of-determination">決定係数/決定係數/Coefficient of Determination</h3>
 <ul>
 <li><strong>総平方和:</strong> <span class="math inline">\(y\)</span>的離散程度<br> <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
