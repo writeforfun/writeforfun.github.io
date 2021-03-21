@@ -70,7 +70,59 @@
   <entry>
     <title>Ch7隨機變數與機率分布</title>
     <url>/2021/03/21/Ch7-randomVariableandDistirbution/</url>
-    <content><![CDATA[
+    <content><![CDATA[<h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
+<ul>
+<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span><br> 而此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span><br></li>
+</ul>
+<h3 id="確率分布機率分布probability-distribution">確率分布/機率分布/Probability Distribution</h3>
+<p>下表為第一點提到的公正骰子的機率分布</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">5</th>
+<th style="text-align: center;">6</th>
+<th style="text-align: center;">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>例題: 投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br> 求此機率變數的隨機分布。<br> Ans:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
       <categories>
         <category>統計檢定</category>
@@ -80,6 +132,43 @@
         <tag>隨機變數</tag>
         <tag>二項分布</tag>
         <tag>常態分布</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo tutorial</title>
+    <url>/2021/03/17/HexoTutorial/</url>
+    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
+<ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="scaffolds">Scaffolds</h2>
+<ul>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<ul>
+<li>draft.md</li>
+<li>page.md</li>
+<li>post.md</li>
+</ul>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</ul>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="tag-plugins">Tag Plugins</h2>
+<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>gitpage</tag>
       </tags>
   </entry>
   <entry>
@@ -226,43 +315,6 @@
       <tags>
         <tag>json</tag>
         <tag>JavaScriptObjectNotation</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo tutorial</title>
-    <url>/2021/03/17/HexoTutorial/</url>
-    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
-<ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
-<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
-<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
-<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
-<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h2 id="scaffolds">Scaffolds</h2>
-<ul>
-<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
-<ul>
-<li>draft.md</li>
-<li>page.md</li>
-<li>post.md</li>
-</ul>
-所以說可以透過修改這些檔案讓default format有更多花樣~</li>
-</ul>
-<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
-<h2 id="tags-categories">Tags &amp; Categories</h2>
-<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h2 id="tag-plugins">Tag Plugins</h2>
-<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
-]]></content>
-      <categories>
-        <category>Web</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>gitpage</tag>
       </tags>
   </entry>
   <entry>
