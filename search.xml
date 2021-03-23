@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Ch4雙變數分析</title>
-    <url>/2021/03/15/CH4_twoVariables/</url>
-    <content><![CDATA[<h3 id="共分散共變異covariance">共分散/共變異/Covariance</h3>
-<ul>
-<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
-<li><span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
-<li><span class="math inline">\(s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
-  \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&amp;=&amp;\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
-  \end{eqnarray*}\]</span> <span id="more"></span></li>
-</ul>
-<h3 id="相関係数相關係數correlation-coefficient">相関係数/相關係數/Correlation Coefficient</h3>
-<ul>
-<li><span class="math inline">\(r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}\)</span>
-<ul>
-<li>備註: <span class="math inline">\(s_{xy}\)</span>是共分散，<span class="math inline">\(s_x, s_y\)</span>是標準偏差</li>
-</ul></li>
-<li>-1<span class="math inline">\(\le\)</span>相關係數<span class="math inline">\(\le\)</span> 1，但越正或越負不代表絕對有關係</li>
-<li><span class="math inline">\(x, y\)</span>軸的變數互換 <span class="math inline">\(r\)</span> 也不會變</li>
-<li><span class="math inline">\(x\)</span>或<span class="math inline">\(y\)</span>的每個值各加/乘個定值 <span class="math inline">\(r\)</span> 也不會變</li>
-</ul>
-<h3 id="擬相関偽關係spurious-correlation">擬相関/偽關係/Spurious Correlation</h3>
-<ul>
-<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:
-<ul>
-<li>人口多導致醫院多</li>
-<li>人口多導致病人多</li>
-</ul></li>
-</ul>
-]]></content>
-      <categories>
-        <category>統計檢定</category>
-        <category>Ch4</category>
-      </categories>
-      <tags>
-        <tag>統計檢定3級</tag>
-        <tag>雙變數</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Ch3單變數分析</title>
     <url>/2021/03/15/CH3_singleVariable/</url>
     <content><![CDATA[<h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
@@ -224,6 +182,48 @@
       </tags>
   </entry>
   <entry>
+    <title>Ch4雙變數分析</title>
+    <url>/2021/03/15/CH4_twoVariables/</url>
+    <content><![CDATA[<h3 id="共分散共變異covariance">共分散/共變異/Covariance</h3>
+<ul>
+<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
+<li><span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
+<li><span class="math inline">\(s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
+  \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&amp;=&amp;\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
+  \end{eqnarray*}\]</span> <span id="more"></span></li>
+</ul>
+<h3 id="相関係数相關係數correlation-coefficient">相関係数/相關係數/Correlation Coefficient</h3>
+<ul>
+<li><span class="math inline">\(r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}\)</span>
+<ul>
+<li>備註: <span class="math inline">\(s_{xy}\)</span>是共分散，<span class="math inline">\(s_x, s_y\)</span>是標準偏差</li>
+</ul></li>
+<li>-1<span class="math inline">\(\le\)</span>相關係數<span class="math inline">\(\le\)</span> 1，但越正或越負不代表絕對有關係</li>
+<li><span class="math inline">\(x, y\)</span>軸的變數互換 <span class="math inline">\(r\)</span> 也不會變</li>
+<li><span class="math inline">\(x\)</span>或<span class="math inline">\(y\)</span>的每個值各加/乘個定值 <span class="math inline">\(r\)</span> 也不會變</li>
+</ul>
+<h3 id="擬相関偽關係spurious-correlation">擬相関/偽關係/Spurious Correlation</h3>
+<ul>
+<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:
+<ul>
+<li>人口多導致醫院多</li>
+<li>人口多導致病人多</li>
+</ul></li>
+</ul>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch4</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>雙變數</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo tutorial</title>
     <url>/2021/03/17/HexoTutorial/</url>
     <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
@@ -273,13 +273,17 @@
 <li><span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br>
 <ul>
 <li>以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}, (x=1,2,3,4,5,6)\)</span></li>
-<li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}, (x=0,1)\)</span><br> 像骰子跟硬幣這種機率都一樣的，又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong></li>
+<li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}, (x=0,1)\)</span><br></li>
 </ul></li>
-</ul></li>
-<li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，所以要算機率的話會用某區間段來算。<br> 例如<span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a&lt;=X&lt;=B)\)</span>。<br></li>
-<li>例:某高中的高一男生裡面選一個人，他的體重大於60kg小於80kg的機率是0.6的話，<br> <span class="math inline">\(P(60&lt;=X&lt;=80)=0.6\)</span><br> 如果確率変数<span class="math inline">\(X\)</span>與確率分布<span class="math inline">\(D\)</span>有對應關係的話，會說確率変数<span class="math inline">\(X\)</span>は確率分布<span class="math inline">\(D\)</span>に従う(不知怎翻成中文)。</li>
 </ul></li>
 </ul>
+像骰子跟硬幣這種機率都一樣的，又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>
+<ul>
+<li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，所以要算機率的話會用某區間段來算。<br> 例如<span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br></li>
+<li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6的話，<br> <span class="math inline">\(P(60\leq X\leq 80)=0.6\)</span><br></li>
+</ul></li>
+</ul>
+<p>如果確率変数<span class="math inline">\(X\)</span>與確率分布<span class="math inline">\(D\)</span>有對應關係的話，會說確率変数<span class="math inline">\(X\)</span>は確率分布<span class="math inline">\(D\)</span>に従う(不知怎翻成中文)。</p>
 <h3 id="確率分布機率分布probability-distribution">確率分布/機率分布/Probability Distribution</h3>
 <p>下表為第一點提到的公正骰子的機率分布</p>
 <table>
