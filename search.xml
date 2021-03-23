@@ -275,12 +275,12 @@
 <li>以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}, (x=1,2,3,4,5,6)\)</span></li>
 <li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}, (x=0,1)\)</span><br></li>
 </ul></li>
-</ul></li>
 </ul>
-像骰子跟硬幣這種機率都一樣的，<br> 又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>
+像骰子跟硬幣這種機率都一樣的，<br> 又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong></li>
+<li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，<br> 所以要算機率的話會用某區間段來算。<br> <span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br>
 <ul>
-<li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，所以要算機率的話會用某區間段來算。<br> 例如<span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br></li>
 <li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6的話，<br> <span class="math inline">\(P(60\leq X\leq 80)=0.6\)</span><br></li>
+</ul></li>
 </ul></li>
 </ul>
 <p>如果確率変数<span class="math inline">\(X\)</span>與確率分布<span class="math inline">\(D\)</span>有對應關係的話，<br> 會說<strong>確率変数<span class="math inline">\(X\)</span>は確率分布<span class="math inline">\(D\)</span>に従う</strong>(不知怎翻成中文)。</p>
