@@ -29,7 +29,7 @@
 <meta property="og:description" content="確率変数&#x2F;隨機變數&#x2F;Random Variable  例如事件\(x\)為擲一公正骰子出現的各個點數，\(x\)就會等於\(1\)~\(6\)， 則此時確率変数\(X&#x3D;{1, 2, 3, 4, 5, 6}\)。 確率変数又可細分為:  離散型 確率変数\(X\)可能的值有k個分別為\(x_1, x_2,...,x_k\)，這些值都有其對應的機率。  \(P(X&#x3D;x_i)&#x3D;p(x_i)&#x3D;p_i (i">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-03-21T14:13:36.000Z">
-<meta property="article:modified_time" content="2021-03-23T16:03:53.786Z">
+<meta property="article:modified_time" content="2021-03-23T16:11:43.466Z">
 <meta property="article:author" content="Yuan">
 <meta property="article:tag" content="隨機變數">
 <meta property="article:tag" content="二項分布">
@@ -209,7 +209,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-03-24 01:03:53" itemprop="dateModified" datetime="2021-03-24T01:03:53+09:00">2021-03-24</time>
+                <time title="修改時間：2021-03-24 01:11:43" itemprop="dateModified" datetime="2021-03-24T01:11:43+09:00">2021-03-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -293,8 +293,7 @@
 </tbody>
 </table>
 <ul>
-<li>例題: 投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br> 求此機率變數的機率分布。<br> Ans:</li>
-</ul>
+<li><p>例題: 投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br> 求此機率變數的機率分布。<br> Ans:</p>
 <table>
 <thead>
 <tr class="header">
@@ -312,7 +311,8 @@
 <td style="text-align: center;">1</td>
 </tr>
 </tbody>
-</table>
+</table></li>
+</ul>
 
     </div>
 
@@ -526,6 +526,59 @@
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
