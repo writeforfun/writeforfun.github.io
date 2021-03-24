@@ -1,6 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ch3單變數分析</title>
+    <url>/2021/03/15/CH3_singleVariable/</url>
+    <content><![CDATA[<h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
+<p><span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span> <span id="more"></span></p>
+<h3 id="中央值中位數median">中央值/中位數/Median</h3>
+<ul>
+<li>特性: 不受外れ値(離群值)影響</li>
+<li>奇數個觀測值: x_{(n+1)/2}$</li>
+<li>偶數個觀測值: <span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
+</ul>
+<h3 id="偏差誤差deviation">偏差/誤差/Deviation</h3>
+<ul>
+<li>定義: 觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
+<li>意義: 值越大表示散らばり越大</li>
+<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
+<li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
+</ul>
+<h3 id="平均偏差">平均偏差</h3>
+<ul>
+<li>定義: <span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
+</ul>
+<h3 id="分散變異數variance">分散/變異數/Variance</h3>
+<ul>
+<li>通常記為<span class="math inline">\(s^2\)</span></li>
+<li>定義: <span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
+<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
+<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
+  \sum_{i=1}^{n}(x_i-\bar{x})^2&amp;=&amp;\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
+  \end{eqnarray*}\]</span></li>
+</ul>
+<h3 id="標準偏差標準差standard-deviation">標準偏差/標準差/Standard Deviation</h3>
+<ul>
+<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
+<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
+</ul>
+<h3 id="標準化standardization">標準化/Standardization</h3>
+<ul>
+<li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
+<li>標準化後: 平均值=0，標準差=1</li>
+<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
+<li>偏差值
+<ul>
+<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
+</ul></li>
+</ul>
+<h3 id="変動係数變異係數coefficient-of-variation">変動係数/變異係數/Coefficient of Variation</h3>
+<ul>
+<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
+<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br> 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
+</ul>
+<h2 id="練習題">練習題</h2>
+<p><img src="https://i.imgur.com/E2I7RzU.png" /></p>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch3</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>基本統計量</tag>
+        <tag>單變數</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ch5回歸直線與預測</title>
+    <url>/2021/03/16/CH5_RegressionLine/</url>
+    <content><![CDATA[<h3 id="回歸regression">回歸/Regression</h3>
+<p><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設 <span class="math inline">\(x,y\)</span> 有某種因果關係的前提下，<br> 從<span class="math inline">\(x\)</span>來預測<span class="math inline">\(y\)</span>值稱為回歸分析 (<strong>不能用<span class="math inline">\(y\)</span>倒推回<span class="math inline">\(x\)</span></strong>)</p>
+<ul>
+<li><span class="math inline">\(x\)</span>: 説明変数</li>
+<li><span class="math inline">\(y\)</span>: 非説明変数/目的変数</li>
+</ul>
+<span id="more"></span>
+<h3 id="推定値估計值estimated-value">推定値/估計值/Estimated Value</h3>
+<p><span class="math inline">\(\alpha , \beta\)</span> 的推定值為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>， 而用<span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>算出來的<span class="math inline">\(\hat{y}\)</span>就是<span class="math inline">\(y\)</span>的預測值。</p>
+<p><span style="color:red"><strong>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢?</strong></span></p>
+<h3 id="最小2乗法最小平方法the-method-of-least-square-ls">最小2乗法/最小平方法/The Method of Least Square (LS)</h3>
+<p>對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>。<br> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和(S)</strong>。<br> 殘差平方和: <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span><br> <span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式得出<span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span><br> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> (94最小平方法啦!)</p>
+<ul>
+<li><p>證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/wyWUEvf.png" /></p></li>
+<li>從上面的證明可以得出聯立的<strong>正規方程式</strong>
+<ul>
+<li><span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_{x^2}}=r_{xy}\frac{s_y}{s_x}\)</span></li>
+<li><span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></li>
+</ul></li>
+</ul>
+<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
+<table>
+<thead>
+<tr class="header">
+<th>次數</th>
+<th>秤砣重量x(g)</th>
+<th>彈簧長度y(mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6</td>
+<td>119</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8</td>
+<td>145</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12</td>
+<td>175</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>14</td>
+<td>191</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>18</td>
+<td>204</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>20</td>
+<td>209</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>24</td>
+<td>244</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>26</td>
+<td>233</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>30</td>
+<td>272</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>32</td>
+<td>268</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span><br> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
+<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span><br> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
+<h3 id="決定係数決定係數coefficient-of-determination">決定係数/決定係數/Coefficient of Determination</h3>
+<ul>
+<li><strong>総平方和:</strong> <span class="math inline">\(y\)</span>的離散程度<br> <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
+<li><strong>回帰による平方和:</strong> 回歸直線能說明的部分(多次抽樣的樣本平均可以當作母平均) <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
+<li><strong>残差平方和:</strong> 回歸直線不能說明的部分(因為實際值沒人知道，所以回歸直線無法說明) <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
+</ul>
+<p><span class="math inline">\(S_T=S_R+Se\)</span><br> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span></p>
+<ul>
+<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
+<li>二次曲線之類的就沒有上述的特性</li>
+</ul>
+<h3 id="重相関係数多重相關係數multiple-correlation-coefficient">重相関係数/多重相關係數/Multiple Correlation Coefficient</h3>
+<ul>
+<li>由來: 決定係數的正平方根<span class="math inline">\(R\)</span><br></li>
+<li>意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
+</ul>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch5</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>回歸直線</tag>
+        <tag>回歸係數</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ch4雙變數分析</title>
     <url>/2021/03/15/CH4_twoVariables/</url>
     <content><![CDATA[<h3 id="共分散共變異covariance">共分散/共變異/Covariance</h3>
@@ -173,11 +354,11 @@
   V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
   &amp;=&amp;\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
   &amp;=&amp;\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
-  &amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
+  &amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\, (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
   &amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
   &amp;=&amp;E(X^2)-\mu^2\\\\
   &amp;=&amp;E(X^2)-\left \{E(X)\right \}^2
-  \end{eqnarray*}\]</span></p></li>
+&gt;    \end{eqnarray*}\]</span></p></li>
 <li><p>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></p></li>
 </ul>
 ]]></content>
@@ -226,120 +407,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>gitpage</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ch5回歸直線與預測</title>
-    <url>/2021/03/16/CH5_RegressionLine/</url>
-    <content><![CDATA[<h3 id="回歸regression">回歸/Regression</h3>
-<p><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設 <span class="math inline">\(x,y\)</span> 有某種因果關係的前提下，<br> 從<span class="math inline">\(x\)</span>來預測<span class="math inline">\(y\)</span>值稱為回歸分析 (<strong>不能用<span class="math inline">\(y\)</span>倒推回<span class="math inline">\(x\)</span></strong>)</p>
-<ul>
-<li><span class="math inline">\(x\)</span>: 説明変数</li>
-<li><span class="math inline">\(y\)</span>: 非説明変数/目的変数</li>
-</ul>
-<span id="more"></span>
-<h3 id="推定値估計值estimated-value">推定値/估計值/Estimated Value</h3>
-<p><span class="math inline">\(\alpha , \beta\)</span> 的推定值為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>， 而用<span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>算出來的<span class="math inline">\(\hat{y}\)</span>就是<span class="math inline">\(y\)</span>的預測值。</p>
-<p><span style="color:red"><strong>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢?</strong></span></p>
-<h3 id="最小2乗法最小平方法the-method-of-least-square-ls">最小2乗法/最小平方法/The Method of Least Square (LS)</h3>
-<p>對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>。<br> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和(S)</strong>。<br> 殘差平方和: <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span><br> <span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式得出<span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span><br> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> (94最小平方法啦!)</p>
-<ul>
-<li><p>證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/wyWUEvf.png" /></p></li>
-<li>從上面的證明可以得出聯立的<strong>正規方程式</strong>
-<ul>
-<li><span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_{x^2}}=r_{xy}\frac{s_y}{s_x}\)</span></li>
-<li><span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></li>
-</ul></li>
-</ul>
-<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
-<table>
-<thead>
-<tr class="header">
-<th>次數</th>
-<th>秤砣重量x(g)</th>
-<th>彈簧長度y(mm)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>6</td>
-<td>119</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>8</td>
-<td>145</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>12</td>
-<td>175</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>14</td>
-<td>191</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>18</td>
-<td>204</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>20</td>
-<td>209</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>24</td>
-<td>244</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>26</td>
-<td>233</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>30</td>
-<td>272</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>32</td>
-<td>268</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span><br> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
-<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span><br> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
-<h3 id="決定係数決定係數coefficient-of-determination">決定係数/決定係數/Coefficient of Determination</h3>
-<ul>
-<li><strong>総平方和:</strong> <span class="math inline">\(y\)</span>的離散程度<br> <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
-<li><strong>回帰による平方和:</strong> 回歸直線能說明的部分(多次抽樣的樣本平均可以當作母平均) <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
-<li><strong>残差平方和:</strong> 回歸直線不能說明的部分(因為實際值沒人知道，所以回歸直線無法說明) <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
-</ul>
-<p><span class="math inline">\(S_T=S_R+Se\)</span><br> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span></p>
-<ul>
-<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
-<li>二次曲線之類的就沒有上述的特性</li>
-</ul>
-<h3 id="重相関係数多重相關係數multiple-correlation-coefficient">重相関係数/多重相關係數/Multiple Correlation Coefficient</h3>
-<ul>
-<li>由來: 決定係數的正平方根<span class="math inline">\(R\)</span><br></li>
-<li>意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
-</ul>
-]]></content>
-      <categories>
-        <category>統計檢定</category>
-        <category>Ch5</category>
-      </categories>
-      <tags>
-        <tag>統計檢定3級</tag>
-        <tag>回歸直線</tag>
-        <tag>回歸係數</tag>
       </tags>
   </entry>
   <entry>
@@ -430,73 +497,6 @@
       <tags>
         <tag>yaml</tag>
         <tag>yml</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ch3單變數分析</title>
-    <url>/2021/03/15/CH3_singleVariable/</url>
-    <content><![CDATA[<h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
-<p><span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span> <span id="more"></span></p>
-<h3 id="中央值中位數median">中央值/中位數/Median</h3>
-<ul>
-<li>特性: 不受外れ値(離群值)影響</li>
-<li>奇數個觀測值: x_{(n+1)/2}$</li>
-<li>偶數個觀測值: <span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
-</ul>
-<h3 id="偏差誤差deviation">偏差/誤差/Deviation</h3>
-<ul>
-<li>定義: 觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
-<li>意義: 值越大表示散らばり越大</li>
-<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
-<li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
-</ul>
-<h3 id="平均偏差">平均偏差</h3>
-<ul>
-<li>定義: <span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
-</ul>
-<h3 id="分散變異數variance">分散/變異數/Variance</h3>
-<ul>
-<li>通常記為<span class="math inline">\(s^2\)</span></li>
-<li>定義: <span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
-<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
-<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
-  \sum_{i=1}^{n}(x_i-\bar{x})^2&amp;=&amp;\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
-  \end{eqnarray*}\]</span></li>
-</ul>
-<h3 id="標準偏差標準差standard-deviation">標準偏差/標準差/Standard Deviation</h3>
-<ul>
-<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
-<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
-</ul>
-<h3 id="標準化standardization">標準化/Standardization</h3>
-<ul>
-<li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
-<li>標準化後: 平均值=0，標準差=1</li>
-<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
-<li>偏差值
-<ul>
-<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
-</ul></li>
-</ul>
-<h3 id="変動係数變異係數coefficient-of-variation">変動係数/變異係數/Coefficient of Variation</h3>
-<ul>
-<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
-<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br> 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
-</ul>
-<h2 id="練習題">練習題</h2>
-<p><img src="https://i.imgur.com/E2I7RzU.png" /></p>
-]]></content>
-      <categories>
-        <category>統計檢定</category>
-        <category>Ch3</category>
-      </categories>
-      <tags>
-        <tag>統計檢定3級</tag>
-        <tag>基本統計量</tag>
-        <tag>單變數</tag>
       </tags>
   </entry>
 </search>
