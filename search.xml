@@ -244,7 +244,7 @@
     <url>/2021/03/21/Ch7_randomVariableandDistirbution/</url>
     <content><![CDATA[<h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
 <ul>
-<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br> <span id="more"></span></li>
+<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。 <span id="more"></span></li>
 </ul>
 <p>確率変数又可細分為:<br> - 離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br> - <span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span> - <span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br> - 以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}\quad (x=1,2,3,4,5,6)\)</span> - 以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}\quad (x=0,1)\)</span><br></p>
 <pre><code>  像骰子跟硬幣這種機率都一樣的，&lt;br&gt;
@@ -447,9 +447,9 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
         <category>Ch7</category>
       </categories>
       <tags>
-        <tag>二項分布</tag>
-        <tag>常態分布</tag>
         <tag>隨機變數</tag>
+        <tag>機率分布</tag>
+        <tag>期望值</tag>
       </tags>
   </entry>
   <entry>
