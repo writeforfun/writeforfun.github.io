@@ -525,9 +525,9 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
     <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
 <h2 id="簡介">簡介</h2>
 <p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> <span id="more"></span></p>
-<h4 id="差別在">差別在:</h4>
+<p>差別在:<br></p>
 <ul>
-<li>換行的時候json要加逗號而yaml不用</li>
+<li>換行的時候json要加逗號而yaml不用<br></li>
 <li>json的key要加雙引號</li>
 </ul>
 <h2 id="寫法">寫法</h2>
