@@ -366,7 +366,7 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
 <ul>
 <li>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></li>
 </ul>
-<p>確率変数為<span class="math inline">\(aX+b\)</span>:<br> - <span class="math inline">\(V(aX+b)=a^2E(X)\)</span> - <span class="math inline">\(\sigma(aX+b)=\left | a \right | \sigma(X)\)</span></p>
+<p>確率変数為<span class="math inline">\(aX+b\)</span>:<br> - <span class="math inline">\(V(aX+b)=a^2E(X)\)</span><br> - <span class="math inline">\(\sigma(aX+b)=\left | a \right | \sigma(X)\)</span></p>
 ]]></content>
       <categories>
         <category>統計檢定</category>
@@ -434,38 +434,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       </tags>
   </entry>
   <entry>
-    <title>json筆記</title>
-    <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
-<h2 id="簡介">簡介</h2>
-<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在: <span id="more"></span> - 換行的時候json要加逗號而yaml不用 - json的key要加雙引號</p>
-<h2 id="寫法">寫法</h2>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>可用縮排把上述資料包進person這object裡面
-<ul>
-<li>呼叫方式: person.gpa</li>
-</ul></li>
-<li>[]裡面可以存:
-<ul>
-<li>單變數像hobbies: [xx, xx, xx]</li>
-<li>多變數像friends: [{xx, xx}, {xx, xx}]</li>
-</ul></li>
-<li>記得要逗號~</li>
-</ul>
-<h2 id="參考來源">參考來源</h2>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-]]></content>
-      <categories>
-        <category>Web</category>
-        <category>data</category>
-      </categories>
-      <tags>
-        <tag>json</tag>
-        <tag>JavaScriptObjectNotation</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>yaml筆記</title>
     <url>/2021/03/19/yaml%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，想說來了解一下它所以就做了這篇簡短的筆記。</p>
@@ -503,6 +471,38 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>yaml</tag>
         <tag>yml</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>json筆記</title>
+    <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
+<h2 id="簡介">簡介</h2>
+<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在: <span id="more"></span> - 換行的時候json要加逗號而yaml不用 - json的key要加雙引號</p>
+<h2 id="寫法">寫法</h2>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>可用縮排把上述資料包進person這object裡面
+<ul>
+<li>呼叫方式: person.gpa</li>
+</ul></li>
+<li>[]裡面可以存:
+<ul>
+<li>單變數像hobbies: [xx, xx, xx]</li>
+<li>多變數像friends: [{xx, xx}, {xx, xx}]</li>
+</ul></li>
+<li>記得要逗號~</li>
+</ul>
+<h2 id="參考來源">參考來源</h2>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>data</category>
+      </categories>
+      <tags>
+        <tag>json</tag>
+        <tag>JavaScriptObjectNotation</tag>
       </tags>
   </entry>
 </search>
