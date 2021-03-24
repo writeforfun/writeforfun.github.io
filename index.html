@@ -202,7 +202,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-03-24 17:32:52" itemprop="dateModified" datetime="2021-03-24T17:32:52+09:00">2021-03-24</time>
+                <time title="修改時間：2021-03-24 17:34:28" itemprop="dateModified" datetime="2021-03-24T17:34:28+09:00">2021-03-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -229,147 +229,146 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
+          <h3 id="確率変数-隨機變數-Random-Variable"><a href="#確率変数-隨機變數-Random-Variable" class="headerlink" title="確率変数/隨機變數/Random Variable"></a>確率変数/隨機變數/Random Variable</h3><ul>
+<li><p>例如事件$x$為擲一公正骰子出現的各個點數，$x$就會等於$1$~$6$，<br><br>則此時確率変数$X={1, 2, 3, 4, 5, 6}$。<br><br>確率変数又可細分為:<br></p>
 <ul>
-<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br> 確率変数又可細分為:<br>
+<li><p>離散型<br><br>確率変数$X$可能的值有k個分別為$x_1, x_2,…,x_k$，這些值都有其對應的機率。<br></p>
 <ul>
-<li>離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br>
+<li>$P(X=x_i)=p(x_i)=p_i (i=1,2,…,k)$</li>
+<li><p>$p_1+p_2+…+p_k=\sum_{i=1}^{k}p_i=1$<br></p>
 <ul>
-<li><span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span></li>
-<li><span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br>
-<ul>
-<li>以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}, (x=1,2,3,4,5,6)\)</span></li>
-<li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}, (x=0,1)\)</span><br></li>
+<li>以骰子為例:<br><br>$P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}$<br><br>$P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}$<br><br>或者寫成$P(X=x)=\frac{1}{6}, (x=1,2,3,4,5,6)$</li>
+<li>以硬幣為例:<br><br>$P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}$<br><br>或者寫成$P(X=x)=\frac{1}{2}, (x=0,1)$<br></li>
 </ul>
-像骰子跟硬幣這種機率都一樣的，<br> 又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>。</li>
-</ul></li>
-<li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，<br> 所以要算機率的話會用某區間段來算。<br> <span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br>
-<ul>
-<li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6，<br> <span class="math inline">\(P(60\leq X\leq 80)=0.6\)</span><br></li>
-</ul></li>
-</ul></li>
+<p>像骰子跟硬幣這種機率都一樣的，<br><br>又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>。</p>
+</li>
 </ul>
-<p>如果確率変数<span class="math inline">\(X\)</span>與確率分布<span class="math inline">\(D\)</span>有對應關係的話，<br> 會說<strong>確率変数<span class="math inline">\(X\)</span>は確率分布<span class="math inline">\(D\)</span>に従う</strong>(不知怎翻成中文)。</p>
-<h3 id="確率分布機率分布probability-distribution">確率分布/機率分布/Probability Distribution</h3>
-<p>下表為第一點提到的公正骰子的機率分布</p>
+</li>
+<li>連續型<br><br>確率変数$X$可能的值是連續的，因爲不是一對一對應關係，<br><br>所以要算機率的話會用某區間段來算。<br><br>$X$在區間$[a,b]$內算出來機率為$P(a\leq X\leq B)$。<br><ul>
+<li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6，<br><br>$P(60\leq X\leq 80)=0.6$<br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果確率変数$X$與確率分布$D$有對應關係的話，<br><br>會說<strong>確率変数$X$は確率分布$D$に従う</strong>(不知怎翻成中文)。</p>
+<h3 id="確率分布-機率分布-Probability-Distribution"><a href="#確率分布-機率分布-Probability-Distribution" class="headerlink" title="確率分布/機率分布/Probability Distribution"></a>確率分布/機率分布/Probability Distribution</h3><p>下表為第一點提到的公正骰子的機率分布</p>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">3</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">5</th>
-<th style="text-align: center;">6</th>
-<th style="text-align: center;">合計</th>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">合計</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;">1</td>
+<tr>
+<td style="text-align:center">$p(x)$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
+</div>
 <ul>
-<li>例題: 投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br> 求此機率變數的機率分布。<br> Ans:</li>
+<li>例題:<br>投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br><br>求此機率變數的機率分布。<br><br>Ans:</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: center;">0</th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">合計</th>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">合計</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;">1</td>
+<tr>
+<td style="text-align:center">$p(x)$</td>
+<td style="text-align:center">$\frac{1}{2}$</td>
+<td style="text-align:center">$\frac{1}{2}$</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
-<h3 id="確率変数の平均期待値">確率変数の平均(期待値)</h3>
-<p><span class="math inline">\(\mu = E(X)=x_1p_1+x_2p_2+...+x_kp_k=\sum_{i=1}^{k}x_ip_i\)</span><br> 骰子的期望值:</p>
+</div>
+<h3 id="確率変数の平均-期待値"><a href="#確率変数の平均-期待値" class="headerlink" title="確率変数の平均(期待値)"></a>確率変数の平均(期待値)</h3><p>$\mu = E(X)=x_1p_1+x_2p_2+…+x_kp_k=\sum_{i=1}^{k}x_ip_i$<br><br>骰子的期望值:</p>
+<div class="table-container">
 <table>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">3</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">5</th>
-<th style="text-align: center;">6</th>
-<th style="text-align: center;">合計</th>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">合計</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;">1</td>
+<tr>
+<td style="text-align:center">$p(x)$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">1</td>
 </tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(x\cdot p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{2}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{3}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{4}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{5}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{6}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{21}{6}\)</span></td>
+<tr>
+<td style="text-align:center">$x\cdot p(x)$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{2}{6}$</td>
+<td style="text-align:center">$\frac{3}{6}$</td>
+<td style="text-align:center">$\frac{4}{6}$</td>
+<td style="text-align:center">$\frac{5}{6}$</td>
+<td style="text-align:center">$\frac{6}{6}$</td>
+<td style="text-align:center">$\frac{21}{6}$</td>
 </tr>
 </tbody>
 </table>
+</div>
 <ul>
-<li>確率変数為<span class="math inline">\(aX+b\)</span>，<span class="math inline">\(E(aX+b)=aE(X)+b\)</span><br> 例: <span class="math inline">\(10X+5=10\times \frac{21}{6}=40\)</span><br></li>
-<li>如果確率変数為<span class="math inline">\(X^2\)</span>，<span class="math inline">\(E(X^2)=\sum_{i=1}^{k}x_i^2p_i\)</span><br> 例: <span class="math inline">\(X^2=1^2\times \frac{1}{6}+2^2\times \frac{1}{6}+...+6^2\times \frac{1}{6}=\frac{91}{6}\)</span><br></li>
+<li>確率変数為$aX+b$，$E(aX+b)=aE(X)+b$<br><br>例: $10X+5=10\times \frac{21}{6}=40$<br></li>
+<li>如果確率変数為$X^2$，$E(X^2)=\sum_{i=1}^{k}x_i^2p_i$<br><br>例: $X^2=1^2\times \frac{1}{6}+2^2\times \frac{1}{6}+…+6^2\times \frac{1}{6}=\frac{91}{6}$<br></li>
 </ul>
-<h3 id="確率変数の分散と標準偏差">確率変数の分散と標準偏差</h3>
-<ul>
-<li>分散:<br> <span class="math inline">\(V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2\)</span><br></li>
+<h3 id="確率変数の分散と標準偏差"><a href="#確率変数の分散と標準偏差" class="headerlink" title="確率変数の分散と標準偏差"></a>確率変数の分散と標準偏差</h3><ul>
+<li>分散:<br><br>$V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2$<br></li>
 </ul>
 <blockquote>
-<p>證明:<br> <span class="math display">\[\begin{eqnarray*}
-V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
-&amp;=&amp;\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
-&amp;=&amp;\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
-&amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\quad (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
-&amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
-&amp;=&amp;E(X^2)-\mu^2\\\\
-&amp;=&amp;E(X^2)-\left \{E(X)\right \}^2
-\end{eqnarray*}\]</span></p>
-</blockquote>
+<p>證明:<br></p>
+<script type="math/tex; mode=display">\begin{eqnarray*}
+    V(X)&=&(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
+    &=&\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
+    &=&\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
+    &=&\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\quad (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
+    &=&\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
+    &=&E(X^2)-\mu^2\\\\
+    &=&E(X^2)-\left \{E(X)\right \}^2
+    \end{eqnarray*}</script></blockquote>
 <ul>
-<li>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></li>
+<li>標準偏差:<br><br>$\sigma (X)=\sqrt{V(X)}$<br></li>
 </ul>
-<p>確率変数為<span class="math inline">\(aX+b\)</span>:<br> - <span class="math inline">\(V(aX+b)=a^2E(X)\)</span><br> - <span class="math inline">\(\sigma(aX+b)=\left | a \right | \sigma(X)\)</span></p>
+<p>確率変数為$aX+b$:<br></p>
+<ul>
+<li>$V(aX+b)=a^2E(X)$</li>
+<li>$\sigma(aX+b)=\left | a \right | \sigma(X)$</li>
+</ul>
 
       
     </div>
@@ -448,8 +447,7 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
 
       
           <p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
-<h2 id="簡介">簡介</h2>
-<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在:
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br><br>差別在:<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/19/json%E7%AD%86%E8%A8%98/#more" rel="contents">
@@ -529,8 +527,7 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
 
       
           <p>因為在設定hexo時必須修改一堆.yml檔，想說來了解一下它所以就做了這篇簡短的筆記。</p>
-<h2 id="簡介">簡介</h2>
-<p>yaml簡寫yml唸作<strong>耶某</strong>，很像json很好懂。<br> 副檔名: .yaml or .yml
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>yaml簡寫yml唸作<strong>耶某</strong>，很像json很好懂。<br><br>副檔名: .yaml or .yml<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/19/yaml%E7%AD%86%E8%A8%98/#more" rel="contents">
@@ -616,7 +613,7 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
 
       
           <p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/17/JLPT/#more" rel="contents">
@@ -701,10 +698,10 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
-<ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure>
+          <h2 id="Writing-amp-Organizing-Content"><a href="#Writing-amp-Organizing-Content" class="headerlink" title="Writing &amp; Organizing Content"></a>Writing &amp; Organizing Content</h2><ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/17/HexoTutorial/#more" rel="contents">
@@ -789,11 +786,10 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="回歸regression">回歸/Regression</h3>
-<p><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設 <span class="math inline">\(x,y\)</span> 有某種因果關係的前提下，<br> 從<span class="math inline">\(x\)</span>來預測<span class="math inline">\(y\)</span>值稱為回歸分析 (<strong>不能用<span class="math inline">\(y\)</span>倒推回<span class="math inline">\(x\)</span></strong>)</p>
+          <h3 id="回歸-Regression"><a href="#回歸-Regression" class="headerlink" title="回歸/Regression"></a>回歸/Regression</h3><p>$y=\alpha +\beta x$，$\alpha , \beta$ 稱為回歸係數<br>假設 $x,y$ 有某種因果關係的前提下，<br><br>從$x$來預測$y$值稱為回歸分析 (<strong>不能用$y$倒推回$x$</strong>)</p>
 <ul>
-<li><span class="math inline">\(x\)</span>: 説明変数</li>
-<li><span class="math inline">\(y\)</span>: 非説明変数/目的変数</li>
+<li>$x$: 説明変数</li>
+<li>$y$: 非説明変数/目的変数</li>
 </ul>
           <!--noindex-->
             <div class="post-button">
@@ -879,16 +875,16 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="共分散共變異covariance">共分散/共變異/Covariance</h3>
-<ul>
-<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
-<li><span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
-<li><span class="math inline">\(s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
-  \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&amp;=&amp;\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
-  \end{eqnarray*}\]</span>
+          <h3 id="共分散-共變異-Covariance"><a href="#共分散-共變異-Covariance" class="headerlink" title="共分散/共變異/Covariance"></a>共分散/共變異/Covariance</h3><ul>
+<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數 </li>
+<li>$s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})$</li>
+<li>$s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}$<blockquote>
+<script type="math/tex; mode=display">\begin{eqnarray*}
+  \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&=&\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
+  &=&\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
+  &=&\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
+  &=&\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
+  \end{eqnarray*}</script>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/15/CH4_twoVariables/#more" rel="contents">
@@ -973,8 +969,7 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
-<p><span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span>
+          <h3 id="平均値-平均值-Mean"><a href="#平均値-平均值-Mean" class="headerlink" title="平均値/平均值/Mean"></a>平均値/平均值/Mean</h3><p>   $\bar{x} = \frac{x_1+x_2+…+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}$<br>   $(\sum_{i=1}^{n}x_i=n\bar{x})$<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/03/15/CH3_singleVariable/#more" rel="contents">

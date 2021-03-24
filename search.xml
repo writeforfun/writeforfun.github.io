@@ -3,59 +3,52 @@
   <entry>
     <title>Ch3單變數分析</title>
     <url>/2021/03/15/CH3_singleVariable/</url>
-    <content><![CDATA[<h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
-<p><span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span> <span id="more"></span></p>
-<h3 id="中央值中位數median">中央值/中位數/Median</h3>
-<ul>
+    <content><![CDATA[<h3 id="平均値-平均值-Mean"><a href="#平均値-平均值-Mean" class="headerlink" title="平均値/平均值/Mean"></a>平均値/平均值/Mean</h3><p>   $\bar{x} = \frac{x_1+x_2+…+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}$<br>   $(\sum_{i=1}^{n}x_i=n\bar{x})$<br><span id="more"></span></p>
+<h3 id="中央值-中位數-Median"><a href="#中央值-中位數-Median" class="headerlink" title="中央值/中位數/Median"></a>中央值/中位數/Median</h3><ul>
 <li>特性: 不受外れ値(離群值)影響</li>
 <li>奇數個觀測值: x_{(n+1)/2}$</li>
-<li>偶數個觀測值: <span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
+<li>偶數個觀測值: $\frac{x_{n/2}+x_{(n/2+1)}}{2}$</li>
 </ul>
-<h3 id="偏差誤差deviation">偏差/誤差/Deviation</h3>
-<ul>
-<li>定義: 觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
+<h3 id="偏差-誤差-Deviation"><a href="#偏差-誤差-Deviation" class="headerlink" title="偏差/誤差/Deviation"></a>偏差/誤差/Deviation</h3><ul>
+<li>定義: 觀測值 - 平均值 = $x_i - \bar{x}$</li>
 <li>意義: 值越大表示散らばり越大</li>
-<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
+<li>偏差的總和為0: $\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0$<br>($x_i$的總和=$n\bar{x}$)</li>
 <li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
 </ul>
-<h3 id="平均偏差">平均偏差</h3>
-<ul>
-<li>定義: <span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
+<h3 id="平均偏差"><a href="#平均偏差" class="headerlink" title="平均偏差"></a>平均偏差</h3><ul>
+<li>定義: $\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x}  \right |$</li>
 </ul>
-<h3 id="分散變異數variance">分散/變異數/Variance</h3>
-<ul>
-<li>通常記為<span class="math inline">\(s^2\)</span></li>
-<li>定義: <span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
-<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
-<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
-  \sum_{i=1}^{n}(x_i-\bar{x})^2&amp;=&amp;\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
-  \end{eqnarray*}\]</span></li>
+<h3 id="分散-變異數-Variance"><a href="#分散-變異數-Variance" class="headerlink" title="分散/變異數/Variance"></a>分散/變異數/Variance</h3><ul>
+<li>通常記為$s^2$</li>
+<li>定義: $s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2$</li>
+<li>因為$\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2$</li>
+<li>$s^2$又= $\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2$<blockquote>
+<script type="math/tex; mode=display">\begin{eqnarray*}
+  \sum_{i=1}^{n}(x_i-\bar{x})^2&=&\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
+  &=&\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
+  &=&\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
+  &=&\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
+  \end{eqnarray*}</script></blockquote>
+</li>
 </ul>
-<h3 id="標準偏差標準差standard-deviation">標準偏差/標準差/Standard Deviation</h3>
-<ul>
-<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
-<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
+<h3 id="標準偏差-標準差-Standard-Deviation"><a href="#標準偏差-標準差-Standard-Deviation" class="headerlink" title="標準偏差/標準差/Standard Deviation"></a>標準偏差/標準差/Standard Deviation</h3><ul>
+<li>通常記為$s$ 或 $\sigma$，就是分散開根號取正</li>
+<li>$s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}$</li>
 </ul>
-<h3 id="標準化standardization">標準化/Standardization</h3>
-<ul>
+<h3 id="標準化-Standardization"><a href="#標準化-Standardization" class="headerlink" title="標準化/Standardization"></a>標準化/Standardization</h3><ul>
 <li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
 <li>標準化後: 平均值=0，標準差=1</li>
-<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
-<li>偏差值
-<ul>
-<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
-</ul></li>
+<li>$z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}$</li>
+<li>偏差值<ul>
+<li>$50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}$</li>
 </ul>
-<h3 id="変動係数變異係數coefficient-of-variation">変動係数/變異係數/Coefficient of Variation</h3>
-<ul>
-<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
-<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br> 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
+</li>
 </ul>
-<h2 id="練習題">練習題</h2>
-<p><img src="https://i.imgur.com/E2I7RzU.png" /></p>
+<h3 id="変動係数-變異係數-Coefficient-of-Variation"><a href="#変動係数-變異係數-Coefficient-of-Variation" class="headerlink" title="変動係数/變異係數/Coefficient of Variation"></a>変動係数/變異係數/Coefficient of Variation</h3><ul>
+<li>$cv=s/\bar{x}$ </li>
+<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br><br>  舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br><br>  <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br><br>  <strong>實際用cv算一次:</strong><br><br>  主管=200/2000=0.1<br><br>  基層=30/100=0.3<br><br>  結果發現基層的年收更離散～</li>
+</ul>
+<h2 id="練習題"><a href="#練習題" class="headerlink" title="練習題"></a>練習題</h2><p><img src="https://i.imgur.com/E2I7RzU.png" alt=""></p>
 ]]></content>
       <categories>
         <category>統計檢定</category>
@@ -70,34 +63,34 @@
   <entry>
     <title>Ch4雙變數分析</title>
     <url>/2021/03/15/CH4_twoVariables/</url>
-    <content><![CDATA[<h3 id="共分散共變異covariance">共分散/共變異/Covariance</h3>
-<ul>
-<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數</li>
-<li><span class="math inline">\(s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})\)</span></li>
-<li><span class="math inline">\(s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
-  \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&amp;=&amp;\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
-  \end{eqnarray*}\]</span> <span id="more"></span></li>
+    <content><![CDATA[<h3 id="共分散-共變異-Covariance"><a href="#共分散-共變異-Covariance" class="headerlink" title="共分散/共變異/Covariance"></a>共分散/共變異/Covariance</h3><ul>
+<li>可用來表示兩變數的關係，缺點是會受單位影響，因此需要相關係數 </li>
+<li>$s_{xy}=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})$</li>
+<li>$s_{xy}=\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}$<blockquote>
+<script type="math/tex; mode=display">\begin{eqnarray*}
+  \sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})&=&\sum_{i=1}^{n}(x_iy_i-x_i\bar{y}-\bar{x}y_i+\bar{x}\bar{y})\\\\
+  &=&\sum_{i=1}^{n}x_iy_i-\bar{y}\sum_{i=1}^{n}x_i-\bar{x}\sum_{i=1}^{n}y_i+ \sum_{i=1}^{n}\bar{x}\bar{y}\\\\
+  &=&\sum_{i=1}^{n}x_iy_i-\bar{y}n\bar{x}-\bar{x}n\bar{y}+ n\bar{x}\bar{y}\\\\
+  &=&\sum_{i=1}^{n}x_iy_i - n\bar{x}\bar{y}
+  \end{eqnarray*}</script><span id="more"></span>
+</blockquote>
+</li>
 </ul>
-<h3 id="相関係数相關係數correlation-coefficient">相関係数/相關係數/Correlation Coefficient</h3>
-<ul>
-<li><span class="math inline">\(r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}\)</span>
-<ul>
-<li>備註: <span class="math inline">\(s_{xy}\)</span>是共分散，<span class="math inline">\(s_x, s_y\)</span>是標準偏差</li>
-</ul></li>
-<li>-1<span class="math inline">\(\le\)</span>相關係數<span class="math inline">\(\le\)</span> 1，但越正或越負不代表絕對有關係</li>
-<li><span class="math inline">\(x, y\)</span>軸的變數互換 <span class="math inline">\(r\)</span> 也不會變</li>
-<li><span class="math inline">\(x\)</span>或<span class="math inline">\(y\)</span>的每個值各加/乘個定值 <span class="math inline">\(r\)</span> 也不會變</li>
+<h3 id="相関係数-相關係數-Correlation-Coefficient"><a href="#相関係数-相關係數-Correlation-Coefficient" class="headerlink" title="相関係数/相關係數/Correlation Coefficient"></a>相関係数/相關係數/Correlation Coefficient</h3><ul>
+<li>$r=\frac{s_{xy}}{s_xs_y}=\frac{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y} )}{\sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2} \sqrt[]{\frac{1}{n}\sum_{i=1}^{n}(y_i-\bar{y})^2}}$ <ul>
+<li>備註: $s_{xy}$是共分散，$s_x, s_y$是標準偏差</li>
 </ul>
-<h3 id="擬相関偽關係spurious-correlation">擬相関/偽關係/Spurious Correlation</h3>
-<ul>
-<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:
-<ul>
+</li>
+<li>-1$\le$相關係數$\le$ 1，但越正或越負不代表絕對有關係</li>
+<li>$x, y$軸的變數互換 $r$ 也不會變</li>
+<li>$x$或$y$的每個值各加/乘個定值 $r$ 也不會變</li>
+</ul>
+<h3 id="擬相関-偽關係-Spurious-Correlation"><a href="#擬相関-偽關係-Spurious-Correlation" class="headerlink" title="擬相関/偽關係/Spurious Correlation"></a>擬相関/偽關係/Spurious Correlation</h3><ul>
+<li>例如醫院的數量跟病人數有正相關，但背後的原因是因為:<ul>
 <li>人口多導致醫院多</li>
 <li>人口多導致病人多</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -112,105 +105,104 @@
   <entry>
     <title>Ch5回歸直線與預測</title>
     <url>/2021/03/16/CH5_RegressionLine/</url>
-    <content><![CDATA[<h3 id="回歸regression">回歸/Regression</h3>
-<p><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設 <span class="math inline">\(x,y\)</span> 有某種因果關係的前提下，<br> 從<span class="math inline">\(x\)</span>來預測<span class="math inline">\(y\)</span>值稱為回歸分析 (<strong>不能用<span class="math inline">\(y\)</span>倒推回<span class="math inline">\(x\)</span></strong>)</p>
+    <content><![CDATA[<h3 id="回歸-Regression"><a href="#回歸-Regression" class="headerlink" title="回歸/Regression"></a>回歸/Regression</h3><p>$y=\alpha +\beta x$，$\alpha , \beta$ 稱為回歸係數<br>假設 $x,y$ 有某種因果關係的前提下，<br><br>從$x$來預測$y$值稱為回歸分析 (<strong>不能用$y$倒推回$x$</strong>)</p>
 <ul>
-<li><span class="math inline">\(x\)</span>: 説明変数</li>
-<li><span class="math inline">\(y\)</span>: 非説明変数/目的変数</li>
+<li>$x$: 説明変数</li>
+<li>$y$: 非説明変数/目的変数</li>
 </ul>
 <span id="more"></span>
-<h3 id="推定値估計值estimated-value">推定値/估計值/Estimated Value</h3>
-<p><span class="math inline">\(\alpha , \beta\)</span> 的推定值為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>， 而用<span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>算出來的<span class="math inline">\(\hat{y}\)</span>就是<span class="math inline">\(y\)</span>的預測值。</p>
-<p><span style="color:red"><strong>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢?</strong></span></p>
-<h3 id="最小2乗法最小平方法the-method-of-least-square-ls">最小2乗法/最小平方法/The Method of Least Square (LS)</h3>
-<p>對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>。<br> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和(S)</strong>。<br> 殘差平方和: <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span><br> <span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式得出<span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span><br> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> (94最小平方法啦!)</p>
+<h3 id="推定値-估計值-Estimated-Value"><a href="#推定値-估計值-Estimated-Value" class="headerlink" title="推定値/估計值/Estimated Value"></a>推定値/估計值/Estimated Value</h3><p>$\alpha , \beta$ 的推定值為 $\hat{\alpha} , \hat{\beta}$，<br>而用$\hat{\alpha} , \hat{\beta}$算出來的$\hat{y}$就是$y$的預測值。</p>
+<p><span style="color:red"><strong>那要怎麼求得 $\hat{\alpha} , \hat{\beta}$ 呢?</strong></span></p>
+<h3 id="最小2乗法-最小平方法-The-Method-of-Least-Square-LS"><a href="#最小2乗法-最小平方法-The-Method-of-Least-Square-LS" class="headerlink" title="最小2乗法/最小平方法/The Method of Least Square (LS)"></a>最小2乗法/最小平方法/The Method of Least Square (LS)</h3><p>對於每個觀測值$(x_i, y_i)$而言，預測值$\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i$。<br><br>$(y_i-\hat{y_i})$稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和(S)</strong>。<br><br>殘差平方和: $\sum_{i=1}^{n}(y_i-\hat{y_i})^2$<br><br>$\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i$代入此式得出$S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2$<br><br>求殘差平方和的最小值就是求 $\hat{\alpha}, \hat{\beta}$ (94最小平方法啦!)</p>
 <ul>
-<li><p>證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/wyWUEvf.png" /></p></li>
-<li>從上面的證明可以得出聯立的<strong>正規方程式</strong>
+<li><p>證明<br><img src="https://i.imgur.com/CpnbFPR.png" alt=""><br><img src="https://i.imgur.com/wyWUEvf.png" alt=""></p>
+</li>
+<li><p>從上面的證明可以得出聯立的<strong>正規方程式</strong></p>
 <ul>
-<li><span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_{x^2}}=r_{xy}\frac{s_y}{s_x}\)</span></li>
-<li><span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></li>
-</ul></li>
+<li>$\hat{\beta}=\frac{s_{xy}}{s_{x^2}}=r_{xy}\frac{s_y}{s_x}$</li>
+<li>$\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}$</li>
 </ul>
-<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
+</li>
+</ul>
+<p>這樣就可以求回歸方程式了~<br>(以下表的數據舉例)</p>
+<div class="table-container">
 <table>
 <thead>
-<tr class="header">
+<tr>
 <th>次數</th>
 <th>秤砣重量x(g)</th>
 <th>彈簧長度y(mm)</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
+<tr>
 <td>1</td>
 <td>6</td>
 <td>119</td>
 </tr>
-<tr class="even">
+<tr>
 <td>2</td>
 <td>8</td>
 <td>145</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>3</td>
 <td>12</td>
 <td>175</td>
 </tr>
-<tr class="even">
+<tr>
 <td>4</td>
 <td>14</td>
 <td>191</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>5</td>
 <td>18</td>
 <td>204</td>
 </tr>
-<tr class="even">
+<tr>
 <td>6</td>
 <td>20</td>
 <td>209</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>7</td>
 <td>24</td>
 <td>244</td>
 </tr>
-<tr class="even">
+<tr>
 <td>8</td>
 <td>26</td>
 <td>233</td>
 </tr>
-<tr class="odd">
+<tr>
 <td>9</td>
 <td>30</td>
 <td>272</td>
 </tr>
-<tr class="even">
+<tr>
 <td>10</td>
 <td>32</td>
 <td>268</td>
 </tr>
 </tbody>
 </table>
-<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span><br> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
-<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span><br> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
-<h3 id="決定係数決定係數coefficient-of-determination">決定係数/決定係數/Coefficient of Determination</h3>
-<ul>
-<li><strong>総平方和:</strong> <span class="math inline">\(y\)</span>的離散程度<br> <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
-<li><strong>回帰による平方和:</strong> 回歸直線能說明的部分(多次抽樣的樣本平均可以當作母平均) <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
-<li><strong>残差平方和:</strong> 回歸直線不能說明的部分(因為實際值沒人知道，所以回歸直線無法說明) <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
+</div>
+<p>$\hat{\beta}=401/73=5.5$<br><br>$\hat{\alpha}=206-5.5\times 19=101.5$</p>
+<p>因此回歸方程式為: $y=101.5+5.5x$<br><br>$x=20$時，$\hat{y}=101.5+5.5\times 20=211.5$<br><br>備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
+<h3 id="決定係数-決定係數-Coefficient-of-Determination"><a href="#決定係数-決定係數-Coefficient-of-Determination" class="headerlink" title="決定係数/決定係數/Coefficient of Determination"></a>決定係数/決定係數/Coefficient of Determination</h3><ul>
+<li><strong>総平方和:</strong> $y$的離散程度<br><br>$S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2$</li>
+<li><strong>回帰による平方和:</strong> 回歸直線能說明的部分(多次抽樣的樣本平均可以當作母平均)<br>$S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2$</li>
+<li><strong>残差平方和:</strong> 回歸直線不能說明的部分(因為實際值沒人知道，所以回歸直線無法說明)<br>$S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2$</li>
 </ul>
-<p><span class="math inline">\(S_T=S_R+Se\)</span><br> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span></p>
+<p>$S_T=S_R+Se$<br><br>決定係數$R^2=\frac{S_R}{S_T}$</p>
 <ul>
-<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
+<li>在回歸直線的情況下:<br>  $R^2=r^2$ (決定係數平方=相關係數平方)</li>
 <li>二次曲線之類的就沒有上述的特性</li>
 </ul>
-<h3 id="重相関係数多重相關係數multiple-correlation-coefficient">重相関係数/多重相關係數/Multiple Correlation Coefficient</h3>
-<ul>
-<li>由來: 決定係數的正平方根<span class="math inline">\(R\)</span><br></li>
-<li>意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
+<h3 id="重相関係数-多重相關係數-Multiple-Correlation-Coefficient"><a href="#重相関係数-多重相關係數-Multiple-Correlation-Coefficient" class="headerlink" title="重相関係数/多重相關係數/Multiple Correlation Coefficient"></a>重相関係数/多重相關係數/Multiple Correlation Coefficient</h3><ul>
+<li>由來: 決定係數的正平方根$R$<br></li>
+<li>意義: 觀測值$y_i$跟預測值$\hat{y_i}$的相關係數</li>
 </ul>
 ]]></content>
       <categories>
@@ -224,32 +216,212 @@
       </tags>
   </entry>
   <entry>
+    <title>Ch7隨機變數與機率分布</title>
+    <url>/2021/03/21/Ch7-randomVariableandDistirbution/</url>
+    <content><![CDATA[<h3 id="確率変数-隨機變數-Random-Variable"><a href="#確率変数-隨機變數-Random-Variable" class="headerlink" title="確率変数/隨機變數/Random Variable"></a>確率変数/隨機變數/Random Variable</h3><ul>
+<li><p>例如事件$x$為擲一公正骰子出現的各個點數，$x$就會等於$1$~$6$，<br><br>則此時確率変数$X={1, 2, 3, 4, 5, 6}$。<br><br>確率変数又可細分為:<br></p>
+<ul>
+<li><p>離散型<br><br>確率変数$X$可能的值有k個分別為$x_1, x_2,…,x_k$，這些值都有其對應的機率。<br></p>
+<ul>
+<li>$P(X=x_i)=p(x_i)=p_i (i=1,2,…,k)$</li>
+<li><p>$p_1+p_2+…+p_k=\sum_{i=1}^{k}p_i=1$<br></p>
+<ul>
+<li>以骰子為例:<br><br>$P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}$<br><br>$P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}$<br><br>或者寫成$P(X=x)=\frac{1}{6}, (x=1,2,3,4,5,6)$</li>
+<li>以硬幣為例:<br><br>$P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}$<br><br>或者寫成$P(X=x)=\frac{1}{2}, (x=0,1)$<br></li>
+</ul>
+<p>像骰子跟硬幣這種機率都一樣的，<br><br>又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>。</p>
+</li>
+</ul>
+</li>
+<li>連續型<br><br>確率変数$X$可能的值是連續的，因爲不是一對一對應關係，<br><br>所以要算機率的話會用某區間段來算。<br><br>$X$在區間$[a,b]$內算出來機率為$P(a\leq X\leq B)$。<br><ul>
+<li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6，<br><br>$P(60\leq X\leq 80)=0.6$<br></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果確率変数$X$與確率分布$D$有對應關係的話，<br><br>會說<strong>確率変数$X$は確率分布$D$に従う</strong>(不知怎翻成中文)。</p>
+<h3 id="確率分布-機率分布-Probability-Distribution"><a href="#確率分布-機率分布-Probability-Distribution" class="headerlink" title="確率分布/機率分布/Probability Distribution"></a>確率分布/機率分布/Probability Distribution</h3><p>下表為第一點提到的公正骰子的機率分布</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$p(x)$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>例題:<br>投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br><br>求此機率變數的機率分布。<br><br>Ans:</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$p(x)$</td>
+<td style="text-align:center">$\frac{1}{2}$</td>
+<td style="text-align:center">$\frac{1}{2}$</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="確率変数の平均-期待値"><a href="#確率変数の平均-期待値" class="headerlink" title="確率変数の平均(期待値)"></a>確率変数の平均(期待値)</h3><p>$\mu = E(X)=x_1p_1+x_2p_2+…+x_kp_k=\sum_{i=1}^{k}x_ip_i$<br><br>骰子的期望值:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">$x$</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">2</th>
+<th style="text-align:center">3</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">6</th>
+<th style="text-align:center">合計</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$p(x)$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">$x\cdot p(x)$</td>
+<td style="text-align:center">$\frac{1}{6}$</td>
+<td style="text-align:center">$\frac{2}{6}$</td>
+<td style="text-align:center">$\frac{3}{6}$</td>
+<td style="text-align:center">$\frac{4}{6}$</td>
+<td style="text-align:center">$\frac{5}{6}$</td>
+<td style="text-align:center">$\frac{6}{6}$</td>
+<td style="text-align:center">$\frac{21}{6}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>確率変数為$aX+b$，$E(aX+b)=aE(X)+b$<br><br>例: $10X+5=10\times \frac{21}{6}=40$<br></li>
+<li>如果確率変数為$X^2$，$E(X^2)=\sum_{i=1}^{k}x_i^2p_i$<br><br>例: $X^2=1^2\times \frac{1}{6}+2^2\times \frac{1}{6}+…+6^2\times \frac{1}{6}=\frac{91}{6}$<br></li>
+</ul>
+<h3 id="確率変数の分散と標準偏差"><a href="#確率変数の分散と標準偏差" class="headerlink" title="確率変数の分散と標準偏差"></a>確率変数の分散と標準偏差</h3><ul>
+<li>分散:<br><br>$V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2$<br></li>
+</ul>
+<blockquote>
+<p>證明:<br></p>
+<script type="math/tex; mode=display">\begin{eqnarray*}
+    V(X)&=&(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
+    &=&\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
+    &=&\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
+    &=&\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\quad (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
+    &=&\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
+    &=&E(X^2)-\mu^2\\\\
+    &=&E(X^2)-\left \{E(X)\right \}^2
+    \end{eqnarray*}</script></blockquote>
+<ul>
+<li>標準偏差:<br><br>$\sigma (X)=\sqrt{V(X)}$<br></li>
+</ul>
+<p>確率変数為$aX+b$:<br></p>
+<ul>
+<li>$V(aX+b)=a^2E(X)$</li>
+<li>$\sigma(aX+b)=\left | a \right | \sigma(X)$</li>
+</ul>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch7</category>
+      </categories>
+      <tags>
+        <tag>隨機變數</tag>
+        <tag>二項分布</tag>
+        <tag>常態分布</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo tutorial</title>
     <url>/2021/03/17/HexoTutorial/</url>
-    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
-<ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
-<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
-<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
-<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
-<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
+    <content><![CDATA[<h2 id="Writing-amp-Organizing-Content"><a href="#Writing-amp-Organizing-Content" class="headerlink" title="Writing &amp; Organizing Content"></a>Writing &amp; Organizing Content</h2><ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+</li>
+<li><p>在瀏覽器預覽draft檔案</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure>
+<p>如此一來用 </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure>
+<p>就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p>
+</li>
+<li><p>除了draft跟post以外，可以創單一個page<br><br>這檔案會被存在 &lt;個人網址&gt;/aboutme</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="scaffolds">Scaffolds</h2>
-<ul>
-<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<h2 id="Scaffolds"><a href="#Scaffolds" class="headerlink" title="Scaffolds"></a>Scaffolds</h2><ul>
+<li><p>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br></p>
 <ul>
 <li>draft.md</li>
 <li>page.md</li>
-<li>post.md</li>
+<li><p>post.md</p>
+<p>所以說可以透過修改這些檔案讓default format有更多花樣~</p>
+</li>
 </ul>
-所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</li>
 </ul>
-<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
-<h2 id="tags-categories">Tags &amp; Categories</h2>
-<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h2 id="tag-plugins">Tag Plugins</h2>
-<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
+<p>以修改 ~/scaffolds/draft.md 為例<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><br>可以改成<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="Tags-amp-Categories"><a href="#Tags-amp-Categories" class="headerlink" title="Tags &amp; Categories"></a>Tags &amp; Categories</h2><p>在Front Matter新增<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure><br>如果tags跟categories的頁面沒出現就自己新增<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure><br>接著修改<br></p>
+<ol>
+<li>source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+<li>source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Tag-Plugins"><a href="#Tag-Plugins" class="headerlink" title="Tag Plugins"></a>Tag Plugins</h2><p>可以用Plugins放codeblock或是iframe (youtube)之類的<br></p>
+<ol>
+<li>插入程式碼<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure></li>
+<li>插入youtube<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>Web</category>
@@ -264,7 +436,7 @@
     <title>JLPT零基礎到N1自學心得</title>
     <url>/2021/03/17/JLPT/</url>
     <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。<br><span id="more"></span><br><img src="/2021/03/17/JLPT/Minnna.jpg" class=""><br>我讀這套書的方法就是:<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure><br>就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br><br>之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
 <p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
 <p>大概就這樣～哈</p>
 ]]></content>
@@ -279,183 +451,28 @@
       </tags>
   </entry>
   <entry>
-    <title>Ch7隨機變數與機率分布</title>
-    <url>/2021/03/21/Ch7-randomVariableandDistirbution/</url>
-    <content><![CDATA[<h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
-<ul>
-<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br> 確率変数又可細分為:<br>
-<ul>
-<li>離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br>
-<ul>
-<li><span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span></li>
-<li><span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br>
-<ul>
-<li>以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}, (x=1,2,3,4,5,6)\)</span></li>
-<li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}, (x=0,1)\)</span><br></li>
-</ul>
-像骰子跟硬幣這種機率都一樣的，<br> 又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>。</li>
-</ul></li>
-<li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，<br> 所以要算機率的話會用某區間段來算。<br> <span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br>
-<ul>
-<li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6，<br> <span class="math inline">\(P(60\leq X\leq 80)=0.6\)</span><br></li>
-</ul></li>
-</ul></li>
-</ul>
-<p>如果確率変数<span class="math inline">\(X\)</span>與確率分布<span class="math inline">\(D\)</span>有對應關係的話，<br> 會說<strong>確率変数<span class="math inline">\(X\)</span>は確率分布<span class="math inline">\(D\)</span>に従う</strong>(不知怎翻成中文)。</p>
-<h3 id="確率分布機率分布probability-distribution">確率分布/機率分布/Probability Distribution</h3>
-<p>下表為第一點提到的公正骰子的機率分布</p>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">3</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">5</th>
-<th style="text-align: center;">6</th>
-<th style="text-align: center;">合計</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>例題: 投一枚正反面發生機率相同的硬幣，出現正面時X=1；反面時X=0。<br> 求此機率變數的機率分布。<br> Ans:</li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: center;">0</th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">合計</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{2}\)</span></td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<h3 id="確率変数の平均期待値">確率変数の平均(期待値)</h3>
-<p><span class="math inline">\(\mu = E(X)=x_1p_1+x_2p_2+...+x_kp_k=\sum_{i=1}^{k}x_ip_i\)</span><br> 骰子的期望值:</p>
-<table>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(x\)</span></th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">3</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">5</th>
-<th style="text-align: center;">6</th>
-<th style="text-align: center;">合計</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><span class="math inline">\(x\cdot p(x)\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{1}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{2}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{3}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{4}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{5}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{6}{6}\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\frac{21}{6}\)</span></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>確率変数為<span class="math inline">\(aX+b\)</span>，<span class="math inline">\(E(aX+b)=aE(X)+b\)</span><br> 例: <span class="math inline">\(10X+5=10\times \frac{21}{6}=40\)</span><br></li>
-<li>如果確率変数為<span class="math inline">\(X^2\)</span>，<span class="math inline">\(E(X^2)=\sum_{i=1}^{k}x_i^2p_i\)</span><br> 例: <span class="math inline">\(X^2=1^2\times \frac{1}{6}+2^2\times \frac{1}{6}+...+6^2\times \frac{1}{6}=\frac{91}{6}\)</span><br></li>
-</ul>
-<h3 id="確率変数の分散と標準偏差">確率変数の分散と標準偏差</h3>
-<ul>
-<li>分散:<br> <span class="math inline">\(V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2\)</span><br></li>
-</ul>
-<blockquote>
-<p>證明:<br> <span class="math display">\[\begin{eqnarray*}
-V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
-&amp;=&amp;\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
-&amp;=&amp;\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
-&amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\quad (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
-&amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
-&amp;=&amp;E(X^2)-\mu^2\\\\
-&amp;=&amp;E(X^2)-\left \{E(X)\right \}^2
-\end{eqnarray*}\]</span></p>
-</blockquote>
-<ul>
-<li>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></li>
-</ul>
-<p>確率変数為<span class="math inline">\(aX+b\)</span>:<br> - <span class="math inline">\(V(aX+b)=a^2E(X)\)</span><br> - <span class="math inline">\(\sigma(aX+b)=\left | a \right | \sigma(X)\)</span></p>
-]]></content>
-      <categories>
-        <category>統計檢定</category>
-        <category>Ch7</category>
-      </categories>
-      <tags>
-        <tag>隨機變數</tag>
-        <tag>二項分布</tag>
-        <tag>常態分布</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>json筆記</title>
     <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
-<h2 id="簡介">簡介</h2>
-<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在: <span id="more"></span> - 換行的時候json要加逗號而yaml不用 - json的key要加雙引號</p>
-<h2 id="寫法">寫法</h2>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br><br>差別在:<br><span id="more"></span></p>
 <ul>
-<li>可用縮排把上述資料包進person這object裡面
+<li>換行的時候json要加逗號而yaml不用</li>
+<li>json的key要加雙引號</li>
+</ul>
+<h2 id="寫法"><a href="#寫法" class="headerlink" title="寫法"></a>寫法</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 <ul>
+<li>可用縮排把上述資料包進person這object裡面<ul>
 <li>呼叫方式: person.gpa</li>
-</ul></li>
-<li>[]裡面可以存:
-<ul>
+</ul>
+</li>
+<li>[]裡面可以存:<ul>
 <li>單變數像hobbies: [xx, xx, xx]</li>
 <li>多變數像friends: [{xx, xx}, {xx, xx}]</li>
-</ul></li>
+</ul>
+</li>
 <li>記得要逗號~</li>
 </ul>
-<h2 id="參考來源">參考來源</h2>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-]]></content>
+<h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>]]></content>
       <categories>
         <category>Web</category>
         <category>data</category>
@@ -469,33 +486,28 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
     <title>yaml筆記</title>
     <url>/2021/03/19/yaml%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，想說來了解一下它所以就做了這篇簡短的筆記。</p>
-<h2 id="簡介">簡介</h2>
-<p>yaml簡寫yml唸作<strong>耶某</strong>，很像json很好懂。<br> 副檔名: .yaml or .yml <span id="more"></span></p>
-<h2 id="寫法">寫法</h2>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 這是註解</span></span><br><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&quot;Yuan&quot;</span></span><br><span class="line">  <span class="attr">occupation:</span> <span class="string">&quot;Incoming Yahooer&quot;</span>  </span><br><span class="line">  <span class="attr">age:</span> <span class="type">!!float</span> <span class="number">26</span> <span class="comment"># 26.0</span></span><br><span class="line">  <span class="attr">birthday:</span> <span class="number">1994-09-22 15:00:00</span> <span class="comment"># ISO 8601</span></span><br><span class="line">  <span class="attr">gpa:</span> <span class="type">!!str</span> <span class="number">3.2</span> <span class="comment"># &quot;3.2&quot;</span></span><br><span class="line">  <span class="attr">favriate number:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">male:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">flaws:</span> <span class="literal">null</span></span><br><span class="line">  <span class="attr">hobbies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;guitar&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;coding&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;statistics&quot;</span></span><br><span class="line">  <span class="attr">fruits:</span> [<span class="string">&quot;mango&quot;</span>, <span class="string">&quot;apple&quot;</span>]</span><br><span class="line">  <span class="attr">friends:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;Anger&quot;</span></span><br><span class="line">      <span class="attr">age:</span> <span class="number">25</span></span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">&quot;Book&quot;</span>, <span class="attr">age:</span> <span class="number">25</span>&#125;</span><br><span class="line">    <span class="bullet">-</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">&quot;NaYue&quot;</span></span><br><span class="line">      <span class="attr">age:</span> <span class="number">24</span></span><br><span class="line">  <span class="attr">decription:</span> <span class="string">&gt;</span></span><br><span class="line">    <span class="string">Study</span> <span class="string">in</span> <span class="string">Tokyo</span> <span class="string">now.</span></span><br><span class="line">    <span class="string">Recently</span> <span class="string">built</span> <span class="string">a</span> <span class="string">blog</span> <span class="string">with</span> <span class="string">hexo</span> <span class="string">and</span> <span class="string">gitpage</span></span><br><span class="line">    <span class="string">like</span> <span class="string">what</span> <span class="string">you</span> <span class="string">see</span> <span class="string">here.</span> </span><br><span class="line">  <span class="attr">signature:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">Yuan</span></span><br><span class="line">    <span class="string">Waseda</span> <span class="string">University</span></span><br><span class="line">    <span class="attr">email:</span> <span class="string">howlen0319@gmail.com</span></span><br></pre></td></tr></table></figure>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>yaml簡寫yml唸作<strong>耶某</strong>，很像json很好懂。<br><br>副檔名: .yaml or .yml<br><span id="more"></span></p>
+<h2 id="寫法"><a href="#寫法" class="headerlink" title="寫法"></a>寫法</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 這是註解</span></span><br><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&quot;Yuan&quot;</span></span><br><span class="line">  <span class="attr">occupation:</span> <span class="string">&quot;Incoming Yahooer&quot;</span>  </span><br><span class="line">  <span class="attr">age:</span> <span class="type">!!float</span> <span class="number">26</span> <span class="comment"># 26.0</span></span><br><span class="line">  <span class="attr">birthday:</span> <span class="number">1994-09-22 15:00:00</span> <span class="comment"># ISO 8601</span></span><br><span class="line">  <span class="attr">gpa:</span> <span class="type">!!str</span> <span class="number">3.2</span> <span class="comment"># &quot;3.2&quot;</span></span><br><span class="line">  <span class="attr">favriate number:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">male:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">flaws:</span> <span class="literal">null</span></span><br><span class="line">  <span class="attr">hobbies:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;guitar&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;coding&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;statistics&quot;</span></span><br><span class="line">  <span class="attr">fruits:</span> [<span class="string">&quot;mango&quot;</span>, <span class="string">&quot;apple&quot;</span>]</span><br><span class="line">  <span class="attr">friends:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">&quot;Anger&quot;</span></span><br><span class="line">      <span class="attr">age:</span> <span class="number">25</span></span><br><span class="line">    <span class="bullet">-</span> &#123;<span class="attr">name:</span> <span class="string">&quot;Book&quot;</span>, <span class="attr">age:</span> <span class="number">25</span>&#125;</span><br><span class="line">    <span class="bullet">-</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">&quot;NaYue&quot;</span></span><br><span class="line">      <span class="attr">age:</span> <span class="number">24</span></span><br><span class="line">  <span class="attr">decription:</span> <span class="string">&gt;</span></span><br><span class="line">    <span class="string">Study</span> <span class="string">in</span> <span class="string">Tokyo</span> <span class="string">now.</span></span><br><span class="line">    <span class="string">Recently</span> <span class="string">built</span> <span class="string">a</span> <span class="string">blog</span> <span class="string">with</span> <span class="string">hexo</span> <span class="string">and</span> <span class="string">gitpage</span></span><br><span class="line">    <span class="string">like</span> <span class="string">what</span> <span class="string">you</span> <span class="string">see</span> <span class="string">here.</span> </span><br><span class="line">  <span class="attr">signature:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">Yuan</span></span><br><span class="line">    <span class="string">Waseda</span> <span class="string">University</span></span><br><span class="line">    <span class="attr">email:</span> <span class="string">howlen0319@gmail.com</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>可用縮排把上述資料包進person這object裡面
-<ul>
+<li>可用縮排把上述資料包進person這object裡面<ul>
 <li>呼叫方式: person.gpa</li>
-</ul></li>
-<li>!!可以強制轉型</li>
+</ul>
+</li>
+<li>!!可以強制轉型 </li>
 <li>hobbies的寫法跟fruits互通</li>
 <li>friends下的三種寫法互通，都會被存成list</li>
 <li>decription後面的&gt;，可以讓分段的文字被存成一行(分行之類的format不會被保存)</li>
 <li>相反的，signature後面的|可以讓format被保存下來</li>
 </ul>
-<h2 id="進階寫法">進階寫法</h2>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&amp;name_var</span> <span class="string">&quot;Yuan&quot;</span> <span class="comment">#&amp;後面的字不一定要跟key一樣</span></span><br><span class="line"><span class="attr">id:</span> <span class="meta">*name</span></span><br><span class="line"></span><br><span class="line"><span class="attr">base:</span> <span class="meta">&amp;base</span></span><br><span class="line">  <span class="attr">var1:</span> <span class="string">value1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">foo:</span></span><br><span class="line">  <span class="attr">foo_var1:</span> <span class="string">*base</span> <span class="comment"># var1: value1</span></span><br></pre></td></tr></table></figure>
+<h2 id="進階寫法"><a href="#進階寫法" class="headerlink" title="進階寫法"></a>進階寫法</h2><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">person:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">&amp;name_var</span> <span class="string">&quot;Yuan&quot;</span> <span class="comment">#&amp;後面的字不一定要跟key一樣</span></span><br><span class="line"><span class="attr">id:</span> <span class="meta">*name</span></span><br><span class="line"></span><br><span class="line"><span class="attr">base:</span> <span class="meta">&amp;base</span></span><br><span class="line">  <span class="attr">var1:</span> <span class="string">value1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">foo:</span></span><br><span class="line">  <span class="attr">foo_var1:</span> <span class="string">*base</span> <span class="comment"># var1: value1</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>id透過*可以存取name_var也就是&quot;Yuan&quot;</li>
-<li>*也可以存取整個key-value pair
-<ul>
+<li>id透過*可以存取name_var也就是”Yuan”</li>
+<li>*也可以存取整個key-value pair<ul>
 <li>例如foo的寫法</li>
-</ul></li>
 </ul>
-<h2 id="參考來源">參考來源</h2>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/cdLNKUoMc6c" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-]]></content>
+</li>
+</ul>
+<h2 id="參考來源"><a href="#參考來源" class="headerlink" title="參考來源"></a>參考來源</h2><div class="video-container"><iframe src="https://www.youtube.com/embed/cdLNKUoMc6c" frameborder="0" loading="lazy" allowfullscreen></iframe></div>]]></content>
       <categories>
         <category>Web</category>
         <category>data</category>
