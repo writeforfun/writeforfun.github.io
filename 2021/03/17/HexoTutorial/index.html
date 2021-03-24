@@ -21,12 +21,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Writing &amp; Organizing Content 創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b">
+  <meta name="description" content="Writing &amp; Organizing Content  創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts 1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo tutorial">
 <meta property="og:url" content="http://example.com/2021/03/17/HexoTutorial/index.html">
 <meta property="og:site_name" content="YuanDaily">
-<meta property="og:description" content="Writing &amp; Organizing Content 創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b">
+<meta property="og:description" content="Writing &amp; Organizing Content  創新md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_posts 1$ hexo new a 創草稿md檔案至 ~&#x2F;Documents&#x2F;Hexo&#x2F;你的資料夾名稱&#x2F;source&#x2F;_drafts 1$ hexo new draft b">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-03-17T05:44:25.000Z">
 <meta property="article:modified_time" content="2021-03-20T16:39:58.069Z">
@@ -242,56 +242,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Writing-amp-Organizing-Content"><a href="#Writing-amp-Organizing-Content" class="headerlink" title="Writing &amp; Organizing Content"></a>Writing &amp; Organizing Content</h2><ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-</li>
-<li><p>在瀏覽器預覽draft檔案</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure>
-<p>改成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure>
-<p>如此一來用 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure>
-<p>就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p>
-</li>
-<li><p>除了draft跟post以外，可以創單一個page<br><br>這檔案會被存在 &lt;個人網址&gt;/aboutme</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure>
-</li>
+        <h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
+<ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
 </ul>
-<h2 id="Scaffolds"><a href="#Scaffolds" class="headerlink" title="Scaffolds"></a>Scaffolds</h2><ul>
-<li><p>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br></p>
+<h2 id="scaffolds">Scaffolds</h2>
+<ul>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
 <ul>
 <li>draft.md</li>
 <li>page.md</li>
-<li><p>post.md</p>
-<p>所以說可以透過修改這些檔案讓default format有更多花樣~</p>
-</li>
+<li>post.md</li>
 </ul>
-</li>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
 </ul>
-<p>以修改 ~/scaffolds/draft.md 為例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure><br>可以改成<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
-<h2 id="Tags-amp-Categories"><a href="#Tags-amp-Categories" class="headerlink" title="Tags &amp; Categories"></a>Tags &amp; Categories</h2><p>在Front Matter新增<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure><br>如果tags跟categories的頁面沒出現就自己新增<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure><br>接著修改<br></p>
-<ol>
-<li>source/tags/index.md <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
-<li>source/categories/index.md <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="Tag-Plugins"><a href="#Tag-Plugins" class="headerlink" title="Tag Plugins"></a>Tag Plugins</h2><p>可以用Plugins放codeblock或是iframe (youtube)之類的<br></p>
-<ol>
-<li>插入程式碼<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure></li>
-<li>插入youtube<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-</li>
-</ol>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="tag-plugins">Tag Plugins</h2>
+<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
 
     </div>
 
@@ -376,7 +350,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-amp-Organizing-Content"><span class="nav-number">1.</span> <span class="nav-text">Writing &amp; Organizing Content</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scaffolds"><span class="nav-number">2.</span> <span class="nav-text">Scaffolds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tags-amp-Categories"><span class="nav-number">3.</span> <span class="nav-text">Tags &amp; Categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tag-Plugins"><span class="nav-number">4.</span> <span class="nav-text">Tag Plugins</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#writing-organizing-content"><span class="nav-number">1.</span> <span class="nav-text">Writing &amp; Organizing Content</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#scaffolds"><span class="nav-number">2.</span> <span class="nav-text">Scaffolds</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tags-categories"><span class="nav-number">3.</span> <span class="nav-text">Tags &amp; Categories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tag-plugins"><span class="nav-number">4.</span> <span class="nav-text">Tag Plugins</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
