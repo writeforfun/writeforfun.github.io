@@ -409,13 +409,11 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
 </tr>
 </tbody>
 </table>
-<ol type="1">
-<li>求確率変数<span class="math inline">\(X\)</span>的平均、分散、標準偏差?<br></li>
-<li>求確率変数<span class="math inline">\(Y=6X+10\)</span>的平均、分散、標準偏差?<br></li>
-</ol>
-<p>先求<span class="math inline">\(E(X)=1\times \frac{1}{12}+2\times \frac{1}{12}+...+6\times \frac{1}{3}=4\)</span><br> 再求<span class="math inline">\(E(X^2)=1^2\times \frac{1}{12}+2^2\times \frac{1}{12}+...+6^2\times \frac{1}{3}=\frac{113}{6}\)</span><br></p>
-<p>Ans1:<br> - <span class="math inline">\(E(X)=4\)</span><br> - <span class="math inline">\(V(X)=E(X^2)-\left \{E(X)\right \}^2=\frac{113}{6}-4^2=\frac{17}{6}\)</span><br> - <span class="math inline">\(\sigma(X)=\sqrt{V(X)}\approx 1.68\)</span><br></p>
-<p>Ans2:<br> - <span class="math inline">\(E(Y)=E(6X+10)=6E(X)+10=6\times4+10=34\)</span><br> - <span class="math inline">\(V(Y)=V(6X+10)=6^2V(X)=6^2\times \frac{17}{6}=102\)</span><br> - <span class="math inline">\(\sigma(Y)=\sigma(6X+10)=\sqrt{V(6X+10)}=\sqrt{102}\approx 10.1\)</span><br></p>
+<ul>
+<li>Q1: 求確率変数<span class="math inline">\(X\)</span>的平均、分散、標準偏差?<br></li>
+<li>Q2: 求確率変数<span class="math inline">\(Y=6X+10\)</span>的平均、分散、標準偏差?<br></li>
+</ul>
+<p>先求<span class="math inline">\(E(X)=1\times \frac{1}{12}+2\times \frac{1}{12}+...+6\times \frac{1}{3}=4\)</span><br> 再求<span class="math inline">\(E(X^2)=1^2\times \frac{1}{12}+2^2\times \frac{1}{12}+...+6^2\times \frac{1}{3}=\frac{113}{6}\)</span><br> - Ans1:<br> - <span class="math inline">\(E(X)=4\)</span><br> - <span class="math inline">\(V(X)=E(X^2)-\left \{E(X)\right \}^2=\frac{113}{6}-4^2=\frac{17}{6}\)</span><br> - <span class="math inline">\(\sigma(X)=\sqrt{V(X)}\approx 1.68\)</span><br> - Ans2:<br> - <span class="math inline">\(E(Y)=E(6X+10)=6E(X)+10=6\times4+10=34\)</span><br> - <span class="math inline">\(V(Y)=V(6X+10)=6^2V(X)=6^2\times \frac{17}{6}=102\)</span><br> - <span class="math inline">\(\sigma(Y)=\sigma(6X+10)=\sqrt{V(6X+10)}=\sqrt{102}\approx 10.1\)</span><br></p>
 ]]></content>
       <categories>
         <category>統計檢定</category>
