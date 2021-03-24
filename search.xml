@@ -350,16 +350,21 @@
 </ul>
 <h3 id="確率変数の分散と標準偏差">確率変数の分散と標準偏差</h3>
 <ul>
-<li><p>分散:<br> <span class="math inline">\(V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2\)</span><br> &gt; 證明:<br> &gt; <span class="math display">\[\begin{eqnarray*}
-  V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
-  &amp;=&amp;\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
-  &amp;=&amp;\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
-  &amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\quad (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
-  &amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
-  &amp;=&amp;E(X^2)-\mu^2\\\\
-  &amp;=&amp;E(X^2)-\left \{E(X)\right \}^2
-  \end{eqnarray*}\]</span></p></li>
-<li><p>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></p></li>
+<li>分散:<br> <span class="math inline">\(V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2\)</span><br></li>
+</ul>
+<blockquote>
+<p>證明:<br> <span class="math display">\[\begin{eqnarray*}
+V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
+&amp;=&amp;\sum_{i=1}^{k}(x_i-\mu)^2p_i\\\\
+&amp;=&amp;\sum_{i=1}^{k}(x_i^2-2\mu x_i+2\mu^2)p_i\\\\
+&amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu \sum_{i=1}^{k}x_ip_i+\mu^2\sum_{i=1}^{k}p_i\quad (\because \sum_{i=1}^{k}x_ip_i=E(X)=\mu)\\\\
+&amp;=&amp;\sum_{i=1}^{k}x_i^2p_i-2\mu\times\mu+\mu^2\times1\\\\
+&amp;=&amp;E(X^2)-\mu^2\\\\
+&amp;=&amp;E(X^2)-\left \{E(X)\right \}^2
+\end{eqnarray*}\]</span></p>
+</blockquote>
+<ul>
+<li>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></li>
 </ul>
 ]]></content>
       <categories>
@@ -370,6 +375,24 @@
         <tag>隨機變數</tag>
         <tag>二項分布</tag>
         <tag>常態分布</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JLPT零基礎到N1自學心得</title>
+    <url>/2021/03/17/JLPT/</url>
+    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
+<p>大概就這樣～哈</p>
+]]></content>
+      <categories>
+        <category>日文</category>
+        <category>JLPT</category>
+      </categories>
+      <tags>
+        <tag>JLPT</tag>
+        <tag>日檢</tag>
+        <tag>大家的日本語</tag>
       </tags>
   </entry>
   <entry>
@@ -407,24 +430,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>gitpage</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JLPT零基礎到N1自學心得</title>
-    <url>/2021/03/17/JLPT/</url>
-    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
-<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
-<p>大概就這樣～哈</p>
-]]></content>
-      <categories>
-        <category>日文</category>
-        <category>JLPT</category>
-      </categories>
-      <tags>
-        <tag>JLPT</tag>
-        <tag>日檢</tag>
-        <tag>大家的日本語</tag>
       </tags>
   </entry>
   <entry>
