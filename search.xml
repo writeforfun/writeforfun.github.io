@@ -350,7 +350,7 @@
 </ul>
 <h3 id="確率変数の分散と標準偏差">確率変数の分散と標準偏差</h3>
 <ul>
-<li>分散: <span class="math inline">\(V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2\)</span><br></li>
+<li>分散:<br> <span class="math inline">\(V(X)=E((X-\mu)^2)=E(X^2)-\left \{E(X)\right \}^2\)</span><br></li>
 </ul>
 <blockquote>
 <p>證明:<br> <span class="math display">\[\begin{eqnarray*}
@@ -364,9 +364,9 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
 \end{eqnarray*}\]</span></p>
 </blockquote>
 <ul>
-<li>標準偏差: <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></li>
+<li>標準偏差:<br> <span class="math inline">\(\sigma (X)=\sqrt{V(X)}\)</span><br></li>
 </ul>
-<p>確率変数為<span class="math inline">\(aX+b\)</span>: - <span class="math inline">\(V(aX+b)=a^2E(X)\)</span> - <span class="math inline">\(\sigma(aX+b)=\left | a \right | \sigma(X)\)</span></p>
+<p>確率変数為<span class="math inline">\(aX+b\)</span>:<br> - <span class="math inline">\(V(aX+b)=a^2E(X)\)</span> - <span class="math inline">\(\sigma(aX+b)=\left | a \right | \sigma(X)\)</span></p>
 ]]></content>
       <categories>
         <category>統計檢定</category>
