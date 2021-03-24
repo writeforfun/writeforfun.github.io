@@ -224,26 +224,35 @@
       </tags>
   </entry>
   <entry>
+    <title>二項分布與正規分布</title>
+    <url>/2021/03/24/Ch7_distributions/</url>
+    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch7</category>
+      </categories>
+      <tags>
+        <tag>二項分布</tag>
+        <tag>常態分布</tag>
+        <tag>正規分布</tag>
+        <tag>標準正規分布</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>隨機變數與機率分布</title>
-    <url>/2021/03/21/Ch7-randomVariableandDistirbution/</url>
+    <url>/2021/03/21/Ch7_randomVariableandDistirbution/</url>
     <content><![CDATA[<h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
 <ul>
-<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br> 確率変数又可細分為:<br>
-<ul>
-<li>離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br>
-<ul>
-<li><span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span></li>
-<li><span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br>
-<ul>
-<li>以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}\quad (x=1,2,3,4,5,6)\)</span></li>
-<li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}\quad (x=0,1)\)</span><br></li>
+<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br> <span id="more"></span></li>
 </ul>
-像骰子跟硬幣這種機率都一樣的，<br> 又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>。</li>
-</ul></li>
+<p>確率変数又可細分為:<br> - 離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br> - <span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span> - <span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br> - 以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}\quad (x=1,2,3,4,5,6)\)</span> - 以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}\quad (x=0,1)\)</span><br></p>
+<pre><code>  像骰子跟硬幣這種機率都一樣的，&lt;br&gt;
+  又稱為**離散型一様分布/離散型均勻分布/Discrete Uniform Distribution**。</code></pre>
+<ul>
 <li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，<br> 所以要算機率的話會用某區間段來算。<br> <span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br>
 <ul>
 <li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6，<br> <span class="math inline">\(P(60\leq X\leq 80)=0.6\)</span><br></li>
-</ul></li>
 </ul></li>
 </ul>
 <p>如果確率変数<span class="math inline">\(X\)</span>與確率分布<span class="math inline">\(D\)</span>有對應關係的話，<br> 會說<strong>確率変数<span class="math inline">\(X\)</span>は確率分布<span class="math inline">\(D\)</span>に従う</strong>(不知怎翻成中文)。</p>
@@ -438,9 +447,9 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
         <category>Ch7</category>
       </categories>
       <tags>
-        <tag>隨機變數</tag>
         <tag>二項分布</tag>
         <tag>常態分布</tag>
+        <tag>隨機變數</tag>
       </tags>
   </entry>
   <entry>
@@ -478,6 +487,24 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>hexo</tag>
         <tag>gitpage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JLPT零基礎到N1自學心得</title>
+    <url>/2021/03/17/JLPT/</url>
+    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
+<p>大概就這樣～哈</p>
+]]></content>
+      <categories>
+        <category>日文</category>
+        <category>JLPT</category>
+      </categories>
+      <tags>
+        <tag>JLPT</tag>
+        <tag>日檢</tag>
+        <tag>大家的日本語</tag>
       </tags>
   </entry>
   <entry>
@@ -550,24 +577,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>yaml</tag>
         <tag>yml</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JLPT零基礎到N1自學心得</title>
-    <url>/2021/03/17/JLPT/</url>
-    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
-<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
-<p>大概就這樣～哈</p>
-]]></content>
-      <categories>
-        <category>日文</category>
-        <category>JLPT</category>
-      </categories>
-      <tags>
-        <tag>JLPT</tag>
-        <tag>日檢</tag>
-        <tag>大家的日本語</tag>
       </tags>
   </entry>
 </search>
