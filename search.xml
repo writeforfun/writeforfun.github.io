@@ -110,6 +110,26 @@
       </tags>
   </entry>
   <entry>
+    <title>二項分布與正規分布</title>
+    <url>/2021/03/24/Ch7_distributions/</url>
+    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
+<ul>
+<li>二項分布屬於離散型確率分布<br></li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch7</category>
+      </categories>
+      <tags>
+        <tag>二項分布</tag>
+        <tag>常態分布</tag>
+        <tag>正規分布</tag>
+        <tag>標準正規分布</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>回歸直線與預測</title>
     <url>/2021/03/16/CH5_RegressionLine/</url>
     <content><![CDATA[<h3 id="回歸regression">回歸/Regression</h3>
@@ -224,23 +244,40 @@
       </tags>
   </entry>
   <entry>
-    <title>二項分布與正規分布</title>
-    <url>/2021/03/24/Ch7_distributions/</url>
-    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
+    <title>Hexo tutorial</title>
+    <url>/2021/03/17/HexoTutorial/</url>
+    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
 <ul>
-<li>二項分布屬於離散型確率分布<br></li>
-<li></li>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
 </ul>
+<h2 id="scaffolds">Scaffolds</h2>
+<ul>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<ul>
+<li>draft.md</li>
+<li>page.md</li>
+<li>post.md</li>
+</ul>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</ul>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="tag-plugins">Tag Plugins</h2>
+<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
 ]]></content>
       <categories>
-        <category>統計檢定</category>
-        <category>Ch7</category>
+        <category>Web</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>二項分布</tag>
-        <tag>常態分布</tag>
-        <tag>正規分布</tag>
-        <tag>標準正規分布</tag>
+        <tag>hexo</tag>
+        <tag>gitpage</tag>
       </tags>
   </entry>
   <entry>
@@ -248,20 +285,12 @@
     <url>/2021/03/21/Ch7_randomVariableandDistirbution/</url>
     <content><![CDATA[<h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
 <ul>
-<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br></li>
+<li>例如事件<span class="math inline">\(x\)</span>為擲一公正骰子出現的各個點數，<span class="math inline">\(x\)</span>就會等於<span class="math inline">\(1\)</span>~<span class="math inline">\(6\)</span>，<br> 則此時確率変数<span class="math inline">\(X={1, 2, 3, 4, 5, 6}\)</span>。<br> <span id="more"></span></li>
 </ul>
-<p>確率変数又可細分為:<br></p>
+<p>確率変数又可細分為:<br> - 離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br> - <span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span> - <span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br> - 以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}\quad (x=1,2,3,4,5,6)\)</span> - 以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}\quad (x=0,1)\)</span><br></p>
+<pre><code>  像骰子跟硬幣這種機率都一樣的，&lt;br&gt;
+  又稱為**離散型一様分布/離散型均勻分布/Discrete Uniform Distribution**。</code></pre>
 <ul>
-<li>離散型<br> 確率変数<span class="math inline">\(X\)</span>可能的值有k個分別為<span class="math inline">\(x_1, x_2,...,x_k\)</span>，這些值都有其對應的機率。<br>
-<ul>
-<li><span class="math inline">\(P(X=x_i)=p(x_i)=p_i (i=1,2,...,k)\)</span></li>
-<li><span class="math inline">\(p_1+p_2+...+p_k=\sum_{i=1}^{k}p_i=1\)</span><br>
-<ul>
-<li>以骰子為例:<br> <span class="math inline">\(P(X=1)=\frac{1}{6}, P(X=2)=\frac{1}{6}, P(X=3)=\frac{1}{6}\)</span><br> <span class="math inline">\(P(X=4)=\frac{1}{6}, P(X=5)=\frac{1}{6}, P(X=6)=\frac{1}{6}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{6}\quad (x=1,2,3,4,5,6)\)</span></li>
-<li>以硬幣為例:<br> <span class="math inline">\(P(X=0)=\frac{1}{2}, P(X=1)=\frac{1}{2}\)</span><br> 或者寫成<span class="math inline">\(P(X=x)=\frac{1}{2}\quad (x=0,1)\)</span><br></li>
-</ul>
-像骰子跟硬幣這種機率都一樣的，<br> 又稱為<strong>離散型一様分布/離散型均勻分布/Discrete Uniform Distribution</strong>。</li>
-</ul></li>
 <li>連續型<br> 確率変数<span class="math inline">\(X\)</span>可能的值是連續的，因爲不是一對一對應關係，<br> 所以要算機率的話會用某區間段來算。<br> <span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>內算出來機率為<span class="math inline">\(P(a\leq X\leq B)\)</span>。<br>
 <ul>
 <li>例:某高中的高一裡面選一個人，他的體重大於60kg小於80kg的機率是0.6，<br> <span class="math inline">\(P(60\leq X\leq 80)=0.6\)</span><br></li>
@@ -465,43 +494,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       </tags>
   </entry>
   <entry>
-    <title>Hexo tutorial</title>
-    <url>/2021/03/17/HexoTutorial/</url>
-    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
-<ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
-<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
-<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
-<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
-<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h2 id="scaffolds">Scaffolds</h2>
-<ul>
-<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
-<ul>
-<li>draft.md</li>
-<li>page.md</li>
-<li>post.md</li>
-</ul>
-所以說可以透過修改這些檔案讓default format有更多花樣~</li>
-</ul>
-<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
-<h2 id="tags-categories">Tags &amp; Categories</h2>
-<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h2 id="tag-plugins">Tag Plugins</h2>
-<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
-]]></content>
-      <categories>
-        <category>Web</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>gitpage</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JLPT零基礎到N1自學心得</title>
     <url>/2021/03/17/JLPT/</url>
     <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
@@ -517,38 +509,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
         <tag>JLPT</tag>
         <tag>日檢</tag>
         <tag>大家的日本語</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>json筆記</title>
-    <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
-    <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
-<h2 id="簡介">簡介</h2>
-<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在: <span id="more"></span> - 換行的時候json要加逗號而yaml不用 - json的key要加雙引號</p>
-<h2 id="寫法">寫法</h2>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>可用縮排把上述資料包進person這object裡面
-<ul>
-<li>呼叫方式: person.gpa</li>
-</ul></li>
-<li>[]裡面可以存:
-<ul>
-<li>單變數像hobbies: [xx, xx, xx]</li>
-<li>多變數像friends: [{xx, xx}, {xx, xx}]</li>
-</ul></li>
-<li>記得要逗號~</li>
-</ul>
-<h2 id="參考來源">參考來源</h2>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-]]></content>
-      <categories>
-        <category>Web</category>
-        <category>data</category>
-      </categories>
-      <tags>
-        <tag>json</tag>
-        <tag>JavaScriptObjectNotation</tag>
       </tags>
   </entry>
   <entry>
@@ -589,6 +549,38 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>yaml</tag>
         <tag>yml</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>json筆記</title>
+    <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
+    <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，而剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
+<h2 id="簡介">簡介</h2>
+<p>json (JavaScript Object Notation)，唸法同<strong>Jason</strong>，跟yaml一樣都是key-value寫法。<br> 差別在: <span id="more"></span> - 換行的時候json要加逗號而yaml不用 - json的key要加雙引號</p>
+<h2 id="寫法">寫法</h2>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">&quot;person&quot;</span>:&#123;</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Yuan&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;age&quot;</span>: <span class="number">26</span>,</span><br><span class="line">    <span class="attr">&quot;gpa&quot;</span>: <span class="number">3.2</span>,</span><br><span class="line">    <span class="attr">&quot;fav_num&quot;</span>: <span class="number">1e+10</span>,</span><br><span class="line">    <span class="attr">&quot;male&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">&quot;flaws&quot;</span>: <span class="literal">null</span>,</span><br><span class="line">    <span class="attr">&quot;hobbies&quot;</span>: [<span class="string">&quot;guitar&quot;</span>, <span class="string">&quot;movies, &quot;</span>coding<span class="string">&quot;],</span></span><br><span class="line"><span class="string">    &quot;</span>friends<span class="string">&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>Anger<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 25</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        &quot;</span>name<span class="string">&quot;: &quot;</span>NaYue<span class="string">&quot;,</span></span><br><span class="line"><span class="string">        &quot;</span>age<span class="string">&quot;: 24</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>可用縮排把上述資料包進person這object裡面
+<ul>
+<li>呼叫方式: person.gpa</li>
+</ul></li>
+<li>[]裡面可以存:
+<ul>
+<li>單變數像hobbies: [xx, xx, xx]</li>
+<li>多變數像friends: [{xx, xx}, {xx, xx}]</li>
+</ul></li>
+<li>記得要逗號~</li>
+</ul>
+<h2 id="參考來源">參考來源</h2>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/gIxLDYvfGcQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>data</category>
+      </categories>
+      <tags>
+        <tag>json</tag>
+        <tag>JavaScriptObjectNotation</tag>
       </tags>
   </entry>
 </search>
