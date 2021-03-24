@@ -224,26 +224,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二項分布與正規分布</title>
-    <url>/2021/03/24/Ch7_distributions/</url>
-    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
-<ul>
-<li>二項分布屬於離散型確率分布<br></li>
-<li></li>
-</ul>
-]]></content>
-      <categories>
-        <category>統計檢定</category>
-        <category>Ch7</category>
-      </categories>
-      <tags>
-        <tag>二項分布</tag>
-        <tag>常態分布</tag>
-        <tag>正規分布</tag>
-        <tag>標準正規分布</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>隨機變數與機率分布</title>
     <url>/2021/03/21/Ch7_randomVariableandDistirbution/</url>
     <content><![CDATA[<h3 id="確率変数隨機變數random-variable">確率変数/隨機變數/Random Variable</h3>
@@ -499,6 +479,26 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>hexo</tag>
         <tag>gitpage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二項分布與正規分布</title>
+    <url>/2021/03/24/Ch7_distributions/</url>
+    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
+<ul>
+<li>二項分布屬於離散型確率分布<br></li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch7</category>
+      </categories>
+      <tags>
+        <tag>二項分布</tag>
+        <tag>常態分布</tag>
+        <tag>正規分布</tag>
+        <tag>標準正規分布</tag>
       </tags>
   </entry>
   <entry>
