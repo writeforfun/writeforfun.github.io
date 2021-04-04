@@ -232,7 +232,7 @@
 <li>只做一次的二項分布就是伯努利試驗(Bernoulli trial)</li>
 </ul>
 <p><span class="math inline">\(P(X=x)=C_{x}^{n}p^x(1-p)^{n-x} \quad (x=0,1,2,...,n)\)</span><br> 1. <span class="math inline">\(C_{x}^{n}\)</span>可以想成從n個裡面取x個當作成功的案例(P=1)。<br> 2. 也可以也想成重複排列。<br></p>
-<p>例: 5個硬幣3正2反的情況為OOOXX，那用1.的想法就是5個硬幣選3個當正面，<br> <span class="math inline">\(C_{3}^{5}=\frac{5 \times 4 \times 3}{3 \times 2 \times 1}\)</span>。<br> 用2.的想法就是<span class="math inline">\(\frac{5!}{3!2!}還是=C_{3}^{5}\)</span></p>
+<p>例: 5個硬幣3正2反的情況為OOOXX，那用1.的想法就是5個硬幣選3個當正面，<br> <span class="math inline">\(C_{3}^{5}=\frac{5 \times 4 \times 3}{3 \times 2 \times 1}\)</span>。用2.的想法就是<span class="math inline">\(\frac{5!}{3!2!}還是=C_{3}^{5}\)</span></p>
 <h4 id="二項分布的性質">二項分布的性質</h4>
 <ul>
 <li>隨機變數<span class="math inline">\(X\)</span>會遵守二項分布<span class="math inline">\(B(n,p)\)</span>
@@ -271,43 +271,6 @@
         <tag>常態分布</tag>
         <tag>正規分布</tag>
         <tag>標準正規分布</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo tutorial</title>
-    <url>/2021/03/17/HexoTutorial/</url>
-    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
-<ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
-<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
-<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
-<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
-<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h2 id="scaffolds">Scaffolds</h2>
-<ul>
-<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
-<ul>
-<li>draft.md</li>
-<li>page.md</li>
-<li>post.md</li>
-</ul>
-所以說可以透過修改這些檔案讓default format有更多花樣~</li>
-</ul>
-<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
-<h2 id="tags-categories">Tags &amp; Categories</h2>
-<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h2 id="tag-plugins">Tag Plugins</h2>
-<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
-]]></content>
-      <categories>
-        <category>Web</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>gitpage</tag>
       </tags>
   </entry>
   <entry>
@@ -532,6 +495,61 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       </tags>
   </entry>
   <entry>
+    <title>Hexo tutorial</title>
+    <url>/2021/03/17/HexoTutorial/</url>
+    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
+<ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="scaffolds">Scaffolds</h2>
+<ul>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<ul>
+<li>draft.md</li>
+<li>page.md</li>
+<li>post.md</li>
+</ul>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</ul>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="tag-plugins">Tag Plugins</h2>
+<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>gitpage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JLPT零基礎到N1自學心得</title>
+    <url>/2021/03/17/JLPT/</url>
+    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
+<p>大概就這樣～哈</p>
+]]></content>
+      <categories>
+        <category>日文</category>
+        <category>JLPT</category>
+      </categories>
+      <tags>
+        <tag>JLPT</tag>
+        <tag>日檢</tag>
+        <tag>大家的日本語</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>json筆記</title>
     <url>/2021/03/19/json%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，剛好yml跟json很像，所以就做了這篇簡短的筆記。</p>
@@ -602,24 +620,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>yaml</tag>
         <tag>yml</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JLPT零基礎到N1自學心得</title>
-    <url>/2021/03/17/JLPT/</url>
-    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
-<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
-<p>大概就這樣～哈</p>
-]]></content>
-      <categories>
-        <category>日文</category>
-        <category>JLPT</category>
-      </categories>
-      <tags>
-        <tag>JLPT</tag>
-        <tag>日檢</tag>
-        <tag>大家的日本語</tag>
       </tags>
   </entry>
 </search>
