@@ -307,7 +307,7 @@
 <p>Ans:<br></p>
 <ol type="1">
 <li><span class="math inline">\(P(X\ge68)=P(\frac{X-60}{5}\ge \frac{68-60}{5})=P(X\ge1.6)=0.0548\)</span></li>
-<li><span class="math inline">\(P(X\le65)=P(\frac{X-60}{5}\le \frac{65-60}{5})=P(Z\le1)=1-0.1587=0.8413\)</span>Z</li>
+<li><span class="math inline">\(P(X\le65)=P(\frac{X-60}{5}\le \frac{65-60}{5})=P(Z\le1)=1-0.1587=0.8413\)</span></li>
 <li><span class="math inline">\(P(65\le X\le70)=P(\frac{65-60}{5}\le Z\le \frac{70-60}{5})=P(1\le Z\le2)\)</span><br> <span class="math inline">\(=P(Z\ge1)-P(Z\ge2)=0.1587-0.0228=0.1359\)</span><br> (大於1小於2的區域就是大於1的區域-大於2的區域～) <img src="https://i.imgur.com/JYC32nq.jpg" /></li>
 </ol>
 <h5 id="二項分布的正規近似">二項分布的正規近似</h5>
