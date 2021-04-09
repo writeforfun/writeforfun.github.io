@@ -29,7 +29,7 @@
 <meta property="og:description" content="前言 最近在移動資料，原本要去各個資料夾下複製再貼到新的資料夾， 但我想偷懶看能不能用python一次搬，結果還真的可以～ 以下就簡單說明一下怎做的。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-04-07T14:54:39.000Z">
-<meta property="article:modified_time" content="2021-04-07T15:12:42.356Z">
+<meta property="article:modified_time" content="2021-04-08T13:44:45.491Z">
 <meta property="article:author" content="Yuan">
 <meta property="article:tag" content="copyfile">
 <meta property="article:tag" content="shutil">
@@ -208,7 +208,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-04-08 00:12:42" itemprop="dateModified" datetime="2021-04-08T00:12:42+09:00">2021-04-08</time>
+                <time title="修改時間：2021-04-08 22:44:45" itemprop="dateModified" datetime="2021-04-08T22:44:45+09:00">2021-04-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,7 +248,11 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copyfile(src, dst)</span><br></pre></td></tr></table></figure>
 <p>說明:<br> 簡單來說第一個參數是原檔案的舊路徑，第二個參數是把原檔案複製後的要放進去的新路徑。<br></p>
 <h3 id="實際操作">實際操作</h3>
+<h4 id="單一檔案">單一檔案</h4>
 <p>假設我要把某檔案<code>example.txt</code>複製一份後，<br> 從舊路徑<code>./old_dir/</code>傳到新路徑<code>./new_dir/</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copyfile</span><br><span class="line"></span><br><span class="line">old_dir = <span class="string">&#x27;./old_dir/&#x27;</span></span><br><span class="line">new_dir = <span class="string">&#x27;./new_dir/&#x27;</span></span><br><span class="line">copyfile(old_dir + <span class="string">&#x27;example.txt&#x27;</span>, new_dir + <span class="string">&#x27;example.txt&#x27;</span>)</span><br></pre></td></tr></table></figure></p>
+<h4 id="多個檔案">多個檔案</h4>
+<p>假設我要把舊路徑<code>./old_dir/</code>裡面所有的圖片檔<code>.jpg</code><br> 傳到新路徑<code>./new_dir/</code> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> shutil <span class="keyword">import</span> copyfile</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">old_dir = <span class="string">&#x27;./old_dir/&#x27;</span></span><br><span class="line">new_dir = <span class="string">&#x27;./new_dir/&#x27;</span></span><br><span class="line">files = os.listdir(old_dir)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> files:</span><br><span class="line">  <span class="keyword">if</span> file.endswith(<span class="string">&#x27;.jpg&#x27;</span>):</span><br><span class="line">    copyfile(old_dir + file, new_dir + file)</span><br></pre></td></tr></table></figure></p>
+<p>以上，就是這麼簡單～</p>
 
     </div>
 
@@ -263,6 +267,11 @@
           </div>
 
         
+  <div class="post-widgets">
+    <div class="wp_rating">
+      <div id="wpac-rating"></div>
+    </div>
+  </div>
 
 
         
@@ -330,7 +339,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84function"><span class="nav-number">2.</span> <span class="nav-text">會用到的function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E9%9A%9B%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">實際操作</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%83%E7%94%A8%E5%88%B0%E7%9A%84function"><span class="nav-number">2.</span> <span class="nav-text">會用到的function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%A6%E9%9A%9B%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">實際操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%96%AE%E4%B8%80%E6%AA%94%E6%A1%88"><span class="nav-number">3.1.</span> <span class="nav-text">單一檔案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%80%8B%E6%AA%94%E6%A1%88"><span class="nav-number">3.2.</span> <span class="nav-text">多個檔案</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -446,6 +455,26 @@
 
 
 
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 30029,
+      el    : 'wpac-rating',
+      color : 'ff9912'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
 
 
 
