@@ -1,6 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>單變數分析</title>
+    <url>/2021/03/15/CH3_singleVariable/</url>
+    <content><![CDATA[<h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
+<p><span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span> <span id="more"></span></p>
+<h3 id="中央值中位數median">中央值/中位數/Median</h3>
+<ul>
+<li>特性: 不受外れ値(離群值)影響</li>
+<li>奇數個觀測值: <span class="math inline">\(x_{(n+1)/2}\)</span></li>
+<li>偶數個觀測值: <span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
+</ul>
+<h3 id="偏差誤差deviation">偏差/誤差/Deviation</h3>
+<ul>
+<li>定義: 觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
+<li>意義: 值越大表示散らばり越大</li>
+<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
+<li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
+</ul>
+<h3 id="平均偏差">平均偏差</h3>
+<ul>
+<li>定義: <span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
+</ul>
+<h3 id="分散變異數variance">分散/變異數/Variance</h3>
+<ul>
+<li>通常記為<span class="math inline">\(s^2\)</span></li>
+<li>定義: <span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
+<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
+<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span> <span class="math display">\[\begin{eqnarray*}
+  \sum_{i=1}^{n}(x_i-\bar{x})^2&amp;=&amp;\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
+  &amp;=&amp;\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
+  \end{eqnarray*}\]</span></li>
+</ul>
+<h3 id="標準偏差標準差standard-deviation">標準偏差/標準差/Standard Deviation</h3>
+<ul>
+<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
+<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
+</ul>
+<h3 id="標準化standardization">標準化/Standardization</h3>
+<ul>
+<li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
+<li>標準化後: 平均值=0，標準差=1</li>
+<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
+<li>偏差值
+<ul>
+<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
+</ul></li>
+</ul>
+<h3 id="変動係数變異係數coefficient-of-variation">変動係数/變異係數/Coefficient of Variation</h3>
+<ul>
+<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
+<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br> 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
+</ul>
+<h3 id="練習題">練習題</h3>
+<p><img src="https://i.imgur.com/E2I7RzU.png" /></p>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch3</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>基本統計量</tag>
+        <tag>單變數</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>雙變數分析</title>
     <url>/2021/03/15/CH4_twoVariables/</url>
     <content><![CDATA[<h3 id="共分散共變異covariance">共分散/共變異/Covariance</h3>
@@ -43,184 +110,133 @@
       </tags>
   </entry>
   <entry>
-    <title>單變數分析</title>
-    <url>/2021/03/15/CH3_singleVariable/</url>
-    <content><![CDATA[<h3 id="平均値平均值mean">平均値/平均值/Mean</h3>
-<p><span class="math inline">\(\bar{x} = \frac{x_1+x_2+...+x_n}{n}= \frac{\sum_{i=1}^{n}x_i}{n}\)</span> <span class="math inline">\((\sum_{i=1}^{n}x_i=n\bar{x})\)</span> <span id="more"></span></p>
-<h3 id="中央值中位數median">中央值/中位數/Median</h3>
+    <title>二項分布與正規分布</title>
+    <url>/2021/03/24/Ch7_distributions/</url>
+    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
 <ul>
-<li>特性: 不受外れ値(離群值)影響</li>
-<li>奇數個觀測值: <span class="math inline">\(x_{(n+1)/2}\)</span></li>
-<li>偶數個觀測值: <span class="math inline">\(\frac{x_{n/2}+x_{(n/2+1)}}{2}\)</span></li>
+<li>二項分布屬於離散型確率分布</li>
+<li>只做一次的二項分布就是伯努利試驗(Bernoulli trial) <span id="more"></span></li>
 </ul>
-<h3 id="偏差誤差deviation">偏差/誤差/Deviation</h3>
+<p><span class="math inline">\(P(X=x)=C_{x}^{n}p^x(1-p)^{n-x} \quad (x=0,1,2,...,n)\)</span><br> 1. <span class="math inline">\(C_{x}^{n}\)</span>可以想成從n個裡面取x個當作成功的案例(P=1)。<br> 2. 也可以也想成重複排列。<br></p>
+<p>例: 5個硬幣3正2反的情況為OOOXX，那用1.的想法就是5個硬幣選3個當正面，<br> <span class="math inline">\(C_{3}^{5}=\frac{5 \times 4 \times 3}{3 \times 2 \times 1}\)</span>。用2.的想法就是<span class="math inline">\(\frac{5!}{3!2!}還是=C_{3}^{5}\)</span></p>
+<h4 id="二項分布的性質">二項分布的性質</h4>
 <ul>
-<li>定義: 觀測值 - 平均值 = <span class="math inline">\(x_i - \bar{x}\)</span></li>
-<li>意義: 值越大表示散らばり越大</li>
-<li>偏差的總和為0: <span class="math inline">\(\sum_{i=1}^{n} {(x_i-\bar{x})}=\sum_{i=1}^{n} {x_i-n\bar{x}}= n\bar{x}-n\bar{x}=0\)</span> (<span class="math inline">\(x_i\)</span>的總和=<span class="math inline">\(n\bar{x}\)</span>)</li>
-<li>因為偏差的和=0，偏差的平均也=0，所以會取絕對值或用平方~</li>
+<li>隨機變數<span class="math inline">\(X\)</span>會遵守二項分布<span class="math inline">\(B(n,p)\)</span>
+<ul>
+<li>X的平均<span class="math inline">\(\mu=np\)</span></li>
+<li>X的分散<span class="math inline">\(\sigma^2=np(1-p)\)</span></li>
+<li>X的標準偏差<span class="math inline">\(\sigma=\sqrt{np(1-p)}\)</span></li>
 </ul>
-<h3 id="平均偏差">平均偏差</h3>
-<ul>
-<li>定義: <span class="math inline">\(\frac{1}{n}\sum_{i=1}^{n}\left | x_i-\bar{x} \right |\)</span></li>
+例題: 隨機變數遵守二項分布B(5, 0.2)，，求P(X=3)、X的平均、分散跟標準偏差。<br>
+<ol type="1">
+<li><span class="math inline">\(P(X=3)=C_3^50.2^3(1-0.2)^2=0.0512\)</span></li>
+<li><span class="math inline">\(\mu =np=5 \times 0.2=1\)</span></li>
+<li><span class="math inline">\(\sigma^2=np(1-p)=5 \times 0.2 \times 0.8=0.8\)</span></li>
+<li><span class="math inline">\(\sigma=\sqrt{0.8}=0.89\)</span></li>
+</ol></li>
 </ul>
-<h3 id="分散變異數variance">分散/變異數/Variance</h3>
+<h3 id="正規分布常態分布高斯分布normal-distribution">正規分布/常態分布(高斯分布)/Normal Distribution</h3>
 <ul>
-<li>通常記為<span class="math inline">\(s^2\)</span></li>
-<li>定義: <span class="math inline">\(s^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2\)</span></li>
-<li>因為<span class="math inline">\(\sum_{i=1}^{n}(x_i-\bar{x})^2=\sum_{i=1}^{n}x_i^2-n\bar{x}^2\)</span></li>
-<li><span class="math inline">\(s^2\)</span>又= <span class="math inline">\(\sum_{i=1}^{n}\frac{x_i^2}{n}-\bar{x}^2\)</span> &gt; <span class="math display">\[\begin{eqnarray*}
-  \sum_{i=1}^{n}(x_i-\bar{x})^2&amp;=&amp;\sum_{i=1}^{n}(x_i^2-2x_i\bar{x}+\bar{x}^2)\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+ \sum_{i=1}^{n}\bar{x}^2\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2-2\bar{x}\times n\bar{x} + n\bar{x}^2\\\\
-  &amp;=&amp;\sum_{i=1}^{n}x_i^2 - n\bar{x}^2
-  \end{eqnarray*}\]</span></li>
-</ul>
-<h3 id="標準偏差標準差standard-deviation">標準偏差/標準差/Standard Deviation</h3>
+<li>正規分布屬於連續型確率分布
 <ul>
-<li>通常記為<span class="math inline">\(s\)</span> 或 <span class="math inline">\(\sigma\)</span>，就是分散開根號取正</li>
-<li><span class="math inline">\(s=\sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2}\)</span></li>
-</ul>
-<h3 id="標準化standardization">標準化/Standardization</h3>
+<li>就是說<span class="math inline">\(P(X=x)\)</span>不會剛好有對應的值，而是用範圍表示</li>
+<li>用<span class="math inline">\(f(x) \ge 0\)</span>表示全體分布
 <ul>
-<li>例如想比較某群體身高跟體重的離散程度，但單位不同時。</li>
-<li>標準化後: 平均值=0，標準差=1</li>
-<li><span class="math inline">\(z_i=\frac{觀測值-平均值}{標準差}=\frac{x_i-\bar{x}}{s}\)</span></li>
-<li>偏差值
+<li><span class="math inline">\(f(x)\)</span>為<span class="math inline">\(X\)</span>的確率密度関数/機率密度函數/Probability Density Function (PDF)</li>
+</ul></li>
+<li>連續型確率変数<span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>的機率為<span class="math inline">\(P(a \le X \le b)\)</span></li>
+<li><span class="math inline">\(\int_{-\infty }^{\infty}f(x)dx=1\)</span> (全部機率合起來是1)</li>
+<li>在正規分布<span class="math inline">\(N(\mu , \sigma^2)\)</span>下的PDF: <span class="math inline">\(f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-(x-\mu)^2}{2\sigma^2}} \quad (-\infty \le x \le \infty)\)</span></li>
+<li>隨機變數<span class="math inline">\(X\)</span>出現在
 <ul>
-<li><span class="math inline">\(50 + 10\times\frac{分數-平均分數}{分數的標準差}=50+10{z_i}\)</span></li>
+<li><span class="math inline">\((\mu - \sigma,\mu + \sigma)\)</span>的機率為68%</li>
+<li><span class="math inline">\((\mu - 2 \sigma,\mu + 2 \sigma)\)</span>的機率為95%</li>
+<li><span class="math inline">\((\mu - 3 \sigma,\mu + 3 \sigma)\)</span>的機率為99.7%</li>
+</ul></li>
 </ul></li>
 </ul>
-<h3 id="変動係数變異係數coefficient-of-variation">変動係数/變異係數/Coefficient of Variation</h3>
+<h4 id="正規分布的性質">正規分布的性質</h4>
 <ul>
-<li><span class="math inline">\(cv=s/\bar{x}\)</span></li>
-<li>雖然說標準差越大資料越離散，但有時候不是標準差大資料就比較離散。<br> 舉例:某公司主管平均年收2000萬，標準差200萬；基層平均年收100萬，標準差30萬。<br> <span style="color:red">單看標準差會覺得是主管年收的離散程度較大。</span><br> <strong>實際用cv算一次:</strong><br> 主管=200/2000=0.1<br> 基層=30/100=0.3<br> 結果發現基層的年收更離散～</li>
+<li>隨機變數<span class="math inline">\(X\)</span>遵守正規分布<span class="math inline">\(N(\mu,\sigma^2)\)</span>時，<span class="math inline">\(Y=aX+b\)</span>則會遵守<span class="math inline">\(N(a\mu+b,a^2\sigma^2)\)</span></li>
+<li>當<span class="math inline">\(Y=aX+b\)</span>的<span class="math inline">\(a=\frac{1}{\sigma}, b=\frac{-\mu}{\sigma}\)</span>時，可以看成<span class="math inline">\(Z=\frac{X-\mu}{\sigma}\)</span>
+<ul>
+<li>也就是說<span class="math inline">\(Z\)</span>會遵守平均0，分散1的正規分布<span class="math inline">\(N(0,1)\)</span> aka 標準正規分布</li>
+</ul></li>
+<li><span class="math inline">\(n\)</span>很大時，遵守<span class="math inline">\(B(n,p)\)</span>的隨機變數<span class="math inline">\(X\)</span>可以視為遵守正規分布<span class="math inline">\(N(np,np(1-p))\)</span></li>
 </ul>
-<h3 id="練習題">練習題</h3>
-<p><img src="https://i.imgur.com/E2I7RzU.png" /></p>
+<h4 id="標準正規分布n01">標準正規分布N(0,1)</h4>
+<p><img src="https://i.imgur.com/fGMcNFA.jpg" /></p>
+<h5 id="用法">用法:</h5>
+<ul>
+<li>假設<span class="math inline">\(u=1.96, Q(1.96)=P(Z\ge 1.96)=0.0250\)</span>
+<ul>
+<li>因為對稱的關係，<span class="math inline">\(P(Z\le -1.96)=P(Z\ge 1.96)=0.0250\)</span></li>
+</ul></li>
+<li><span class="math inline">\(P(Z\le 1.96)=1-P(Z\ge 1.96)=1-0.0250=0.9750\)</span></li>
+<li><span class="math inline">\(P(|Z|\le 1.96)=P(-1.96\le Z\le 1.96)=1-0.0250\times 2=0.950\)</span><br> (就是扣掉最左跟最右的面積)</li>
+</ul>
+<h5 id="常用的數值">常用的數值:</h5>
+<ol type="1">
+<li><span class="math inline">\(P(Z\ge1.28)=0.10\)</span></li>
+<li><span class="math inline">\(P(Z\ge1.645)=0.05\)</span></li>
+<li><span class="math inline">\(P(Z\ge1.96)=0.025\)</span></li>
+<li><span class="math inline">\(P(|Z|\le 1.645)=P(-1.645\le Z\le 1.645)=1-0.05\times2=0.90\)</span></li>
+<li><span class="math inline">\(P(|Z|\le 1.96)=P(-1.96\le Z\le 1.96)=1-0.0250\times 2=0.950\)</span></li>
+</ol>
+<h5 id="一般的正規分布nmusigma可以標準化後轉到n01來算機率">一般的正規分布<span class="math inline">\(N(\mu,\sigma)\)</span>可以標準化後轉到<span class="math inline">\(N(0,1)\)</span>來算機率~</h5>
+<p>例題:隨機變數<span class="math inline">\(X\)</span>遵守正規分布<span class="math inline">\(N(60,5^2)\)</span>時，求:<br></p>
+<ol type="1">
+<li><span class="math inline">\(P(X\ge68)\)</span></li>
+<li><span class="math inline">\(P(X\le65)\)</span></li>
+<li><span class="math inline">\(P(65\le X\le70)\)</span></li>
+</ol>
+<p>Ans:<br></p>
+<ol type="1">
+<li><span class="math inline">\(P(X\ge68)=P(\frac{X-60}{5}\ge \frac{68-60}{5})=P(X\ge1.6)=0.0548\)</span></li>
+<li><span class="math inline">\(P(X\le65)=P(\frac{X-60}{5}\le \frac{65-60}{5})=P(Z\le1)=1-0.1587=0.8413\)</span></li>
+<li><span class="math inline">\(P(65\le X\le70)=P(\frac{65-60}{5}\le Z\le \frac{70-60}{5})=P(1\le Z\le2)\)</span><br> <span class="math inline">\(=P(Z\ge1)-P(Z\ge2)=0.1587-0.0228=0.1359\)</span><br> (大於1小於2的區域就是大於1的區域-大於2的區域～) <img src="https://i.imgur.com/JYC32nq.jpg" /></li>
+</ol>
+<h5 id="二項分布的正規近似">二項分布的正規近似</h5>
+<p>隨機變數<span class="math inline">\(X\)</span>遵守二項分布<span class="math inline">\(B(100,0.2)\)</span>時，用正規分布近似來算:<br></p>
+<ol type="1">
+<li><span class="math inline">\(P(X\ge30)\)</span></li>
+<li><span class="math inline">\(P(X\le28)\)</span></li>
+<li><span class="math inline">\(P(16\le X\le24)\)</span></li>
+</ol>
+<p>首先轉成正規分布<span class="math inline">\(N(np,np(1-p)),\quad (\mu=np, \sigma^2=np(1-p))\)</span><br> <span class="math inline">\(B(100,20)=N(100\times0.2,100\times0.2\times (1-0.2))=N(20,16)=N(20,4^2)\)</span><br></p>
+<ol type="1">
+<li><span class="math inline">\(P(X\ge30)=P(\frac{X-20}{4}\ge \frac{30-20}{4})=P(Z\ge2.5)=0.0062\)</span></li>
+<li><span class="math inline">\(P(X\le28)=P(\frac{X-20}{4}\le \frac{28-20}{4})=P(Z\le2.0)=1-0.0228=0.9772\)</span></li>
+<li><span class="math inline">\(P(16\le X\le24)=P(\frac{16-20}{4}\le Z \le \frac{24-20}{4})\)</span><br> <span class="math inline">\(=P(-1\le Z \le 1)=P(|Z|&lt;=1)=1-2\times0.1587=0.6826\)</span></li>
+</ol>
 ]]></content>
       <categories>
         <category>統計檢定</category>
-        <category>Ch3</category>
+        <category>Ch7</category>
       </categories>
       <tags>
-        <tag>統計檢定3級</tag>
-        <tag>基本統計量</tag>
-        <tag>單變數</tag>
+        <tag>二項分布</tag>
+        <tag>常態分布</tag>
+        <tag>正規分布</tag>
+        <tag>標準正規分布</tag>
       </tags>
   </entry>
   <entry>
-    <title>回歸直線與預測</title>
-    <url>/2021/03/16/CH5_RegressionLine/</url>
-    <content><![CDATA[<h3 id="回歸regression">回歸/Regression</h3>
-<p><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設 <span class="math inline">\(x,y\)</span> 有某種因果關係的前提下，<br> 從<span class="math inline">\(x\)</span>來預測<span class="math inline">\(y\)</span>值稱為回歸分析 (<strong>不能用<span class="math inline">\(y\)</span>倒推回<span class="math inline">\(x\)</span></strong>)</p>
-<ul>
-<li><span class="math inline">\(x\)</span>: 説明変数</li>
-<li><span class="math inline">\(y\)</span>: 非説明変数/目的変数</li>
-</ul>
-<span id="more"></span>
-<h3 id="推定値估計值estimated-value">推定値/估計值/Estimated Value</h3>
-<p><span class="math inline">\(\alpha , \beta\)</span> 的推定值為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>， 而用<span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>算出來的<span class="math inline">\(\hat{y}\)</span>就是<span class="math inline">\(y\)</span>的預測值。</p>
-<p><span style="color:red"><strong>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢?</strong></span></p>
-<h3 id="最小2乗法最小平方法the-method-of-least-square-ls">最小2乗法/最小平方法/The Method of Least Square (LS)</h3>
-<p>對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>。<br> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和(S)</strong>。<br> 殘差平方和: <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span><br> <span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式得出<span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span><br> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> (94最小平方法啦!)</p>
-<ul>
-<li><p>證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/wyWUEvf.png" /></p></li>
-<li>從上面的證明可以得出聯立的<strong>正規方程式</strong>
-<ul>
-<li><span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_{x^2}}=r_{xy}\frac{s_y}{s_x}\)</span></li>
-<li><span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></li>
-</ul></li>
-</ul>
-<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
-<table>
-<thead>
-<tr class="header">
-<th>次數</th>
-<th>秤砣重量x(g)</th>
-<th>彈簧長度y(mm)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>6</td>
-<td>119</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>8</td>
-<td>145</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>12</td>
-<td>175</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>14</td>
-<td>191</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>18</td>
-<td>204</td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>20</td>
-<td>209</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>24</td>
-<td>244</td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>26</td>
-<td>233</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>30</td>
-<td>272</td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>32</td>
-<td>268</td>
-</tr>
-</tbody>
-</table>
-<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span><br> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
-<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span><br> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
-<h3 id="決定係数決定係數coefficient-of-determination">決定係数/決定係數/Coefficient of Determination</h3>
-<ul>
-<li><strong>総平方和:</strong> <span class="math inline">\(y\)</span>的離散程度<br> <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
-<li><strong>回帰による平方和:</strong> 回歸直線能說明的部分(多次抽樣的樣本平均可以當作母平均) <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
-<li><strong>残差平方和:</strong> 回歸直線不能說明的部分(因為實際值沒人知道，所以回歸直線無法說明) <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
-</ul>
-<p><span class="math inline">\(S_T=S_R+Se\)</span><br> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span></p>
-<ul>
-<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
-<li>二次曲線之類的就沒有上述的特性</li>
-</ul>
-<h3 id="重相関係数多重相關係數multiple-correlation-coefficient">重相関係数/多重相關係數/Multiple Correlation Coefficient</h3>
-<ul>
-<li>由來: 決定係數的正平方根<span class="math inline">\(R\)</span><br></li>
-<li>意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
-</ul>
+    <title>JLPT零基礎到N1自學心得</title>
+    <url>/2021/03/17/JLPT/</url>
+    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
+<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
+<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
+<p>大概就這樣～哈</p>
 ]]></content>
       <categories>
-        <category>統計檢定</category>
-        <category>Ch5</category>
+        <category>日文</category>
+        <category>JLPT</category>
       </categories>
       <tags>
-        <tag>統計檢定3級</tag>
-        <tag>回歸直線</tag>
-        <tag>回歸係數</tag>
+        <tag>JLPT</tag>
+        <tag>日檢</tag>
+        <tag>大家的日本語</tag>
       </tags>
   </entry>
   <entry>
@@ -445,61 +461,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       </tags>
   </entry>
   <entry>
-    <title>Hexo tutorial</title>
-    <url>/2021/03/17/HexoTutorial/</url>
-    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
-<ul>
-<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
-<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
-<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
-<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
-<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
-<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<h2 id="scaffolds">Scaffolds</h2>
-<ul>
-<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
-<ul>
-<li>draft.md</li>
-<li>page.md</li>
-<li>post.md</li>
-</ul>
-所以說可以透過修改這些檔案讓default format有更多花樣~</li>
-</ul>
-<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
-<h2 id="tags-categories">Tags &amp; Categories</h2>
-<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h2 id="tag-plugins">Tag Plugins</h2>
-<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
-]]></content>
-      <categories>
-        <category>Web</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>gitpage</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JLPT零基礎到N1自學心得</title>
-    <url>/2021/03/17/JLPT/</url>
-    <content><![CDATA[<p>前言：由於我用過的日文教科書只有《大家的日本語》，所以我沒辦法比較其他參考書~</p>
-<p>《大家的日本語》就像大家說的，如果只有課本是沒辦法自學的，所以必須再搭配它的文法解說跟問題解答共三本套書。我當初也覺得：蛤～一個級別就三本好麻煩，但文法解說本的排版真香，我認為很有條理很好懂就入坑了。 <span id="more"></span> <img src="/2021/03/17/JLPT/Minnna.jpg" class=""> 我讀這套書的方法就是: <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">先背前面的單字</span><br><span class="line">直接讀文法跟課文，用自己的想法解釋一次再看文法解說本，一樣賺到，不一樣再改就好XD </span><br><span class="line">習題每題都寫，包含聽力也要。這沒什麼好說的，就是基本功</span><br></pre></td></tr></table></figure> 就這樣，我單靠這套書的1-50課打下的基礎考過N3，日檢XX題、必考之類的書沒有碰過。<br> 之後N2跟N1都沒再碰任何參考書，純粹靠看日劇跟用語言交換軟體跟日本人練習。</p>
-<p>現在網路跟實體書可以學日文的管道真的很多，基本上沒有優劣只有適不適合你，所以我的建議就是選好一系列的書為主讀下去就對了，不要一下子A出版社之後又換B出版社，搞得自己資訊恐慌。</p>
-<p>大概就這樣～哈</p>
-]]></content>
-      <categories>
-        <category>日文</category>
-        <category>JLPT</category>
-      </categories>
-      <tags>
-        <tag>JLPT</tag>
-        <tag>日檢</tag>
-        <tag>大家的日本語</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Copy file to different directory by python</title>
     <url>/2021/04/07/copyfile/</url>
     <content><![CDATA[<h3 id="前言">前言</h3>
@@ -557,6 +518,157 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       </tags>
   </entry>
   <entry>
+    <title>Hexo tutorial</title>
+    <url>/2021/03/17/HexoTutorial/</url>
+    <content><![CDATA[<h2 id="writing-organizing-content">Writing &amp; Organizing Content</h2>
+<ul>
+<li>創新md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure></li>
+<li><p>創草稿md檔案至 ~/Documents/Hexo/你的資料夾名稱/source/_drafts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new draft b</span><br></pre></td></tr></table></figure> <span id="more"></span></p></li>
+<li><p>在瀏覽器預覽draft檔案 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft </span><br></pre></td></tr></table></figure></p></li>
+<li><p>發表draft檔案，檔案也會從 ~/_draft 被移到 ~/_posts <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo publish b </span><br></pre></td></tr></table></figure></p></li>
+<li><p>在 ~/Documents/Hexo/你的資料夾名稱/_config.yml中<bt> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: post</span><br></pre></td></tr></table></figure> 改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">default_layout: draft</span><br></pre></td></tr></table></figure> 如此一來用 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new a</span><br></pre></td></tr></table></figure> 就會預設創建草稿 (這才對吧，哪有人一new就發文ㄉ==)</p></li>
+<li><p>除了draft跟post以外，可以創單一個page<br> 這檔案會被存在 <個人網址>/aboutme <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page aboutme</span><br></pre></td></tr></table></figure></p></li>
+</ul>
+<h2 id="scaffolds">Scaffolds</h2>
+<ul>
+<li>Scaffolds裡面放了三個檔案用來定義Front Matter (創建md檔時的前幾行)<br>
+<ul>
+<li>draft.md</li>
+<li>page.md</li>
+<li>post.md</li>
+</ul>
+所以說可以透過修改這些檔案讓default format有更多花樣~</li>
+</ul>
+<p>以修改 ~/scaffolds/draft.md 為例 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 可以改成 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">author: Yuan</span><br><span class="line">tags:</span><br><span class="line">---</span><br><span class="line">## H1 TEXT</span><br></pre></td></tr></table></figure></p>
+<h2 id="tags-categories">Tags &amp; Categories</h2>
+<p>在Front Matter新增 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [tag1, tag2, tag3]</span><br><span class="line">categories:</span><br><span class="line">- [cat1, cat1.1]</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 如果tags跟categories的頁面沒出現就自己新增 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure> 接著修改<br> 1. source/tags/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure> 2. source/categories/index.md <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 產生當下時間</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="tag-plugins">Tag Plugins</h2>
+<p>可以用Plugins放codeblock或是iframe (youtube)之類的<br> 1. 插入程式碼 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock lang:python%&#125;</span><br><span class="line">    code...</span><br><span class="line">    code...</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x+y</span><br></pre></td></tr></table></figure> 2. 插入youtube <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% youtube I07XMi7MHd4%&#125;</span><br></pre></td></tr></table></figure> <div class="video-container"><iframe src="https://www.youtube.com/embed/I07XMi7MHd4" frameborder="0" loading="lazy" allowfullscreen></iframe></div></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>gitpage</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>回歸直線與預測</title>
+    <url>/2021/03/16/CH5_RegressionLine/</url>
+    <content><![CDATA[<h3 id="回歸regression">回歸/Regression</h3>
+<p><span class="math inline">\(y=\alpha +\beta x\)</span>，<span class="math inline">\(\alpha , \beta\)</span> 稱為回歸係數 假設 <span class="math inline">\(x,y\)</span> 有某種因果關係的前提下，<br> 從<span class="math inline">\(x\)</span>來預測<span class="math inline">\(y\)</span>值稱為回歸分析 (<strong>不能用<span class="math inline">\(y\)</span>倒推回<span class="math inline">\(x\)</span></strong>)</p>
+<ul>
+<li><span class="math inline">\(x\)</span>: 説明変数</li>
+<li><span class="math inline">\(y\)</span>: 非説明変数/目的変数</li>
+</ul>
+<span id="more"></span>
+<h3 id="推定値估計值estimated-value">推定値/估計值/Estimated Value</h3>
+<p><span class="math inline">\(\alpha , \beta\)</span> 的推定值為 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>， 而用<span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span>算出來的<span class="math inline">\(\hat{y}\)</span>就是<span class="math inline">\(y\)</span>的預測值。</p>
+<p><span style="color:red"><strong>那要怎麼求得 <span class="math inline">\(\hat{\alpha} , \hat{\beta}\)</span> 呢?</strong></span></p>
+<h3 id="最小2乗法最小平方法the-method-of-least-square-ls">最小2乗法/最小平方法/The Method of Least Square (LS)</h3>
+<p>對於每個觀測值<span class="math inline">\((x_i, y_i)\)</span>而言，預測值<span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>。<br> <span class="math inline">\((y_i-\hat{y_i})\)</span>稱為殘差，把每個殘差取平方算總和就稱為<strong>殘差平方和(S)</strong>。<br> 殘差平方和: <span class="math inline">\(\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span><br> <span class="math inline">\(\hat{y_i}=\hat{\alpha }+\hat{\beta}x_i\)</span>代入此式得出<span class="math inline">\(S(\hat{\alpha}, \hat{\beta}) = \sum_{i=1}^{n}(y_i-\hat{\alpha}-\hat{\beta}x_i)^2\)</span><br> 求殘差平方和的最小值就是求 <span class="math inline">\(\hat{\alpha}, \hat{\beta}\)</span> (94最小平方法啦!)</p>
+<ul>
+<li><p>證明 <img src="https://i.imgur.com/CpnbFPR.png" /> <img src="https://i.imgur.com/wyWUEvf.png" /></p></li>
+<li>從上面的證明可以得出聯立的<strong>正規方程式</strong>
+<ul>
+<li><span class="math inline">\(\hat{\beta}=\frac{s_{xy}}{s_{x^2}}=r_{xy}\frac{s_y}{s_x}\)</span></li>
+<li><span class="math inline">\(\hat{\alpha}=\bar{y}-\hat{\beta}\bar{x}\)</span></li>
+</ul></li>
+</ul>
+<p>這樣就可以求回歸方程式了~ (以下表的數據舉例)</p>
+<table>
+<thead>
+<tr class="header">
+<th>次數</th>
+<th>秤砣重量x(g)</th>
+<th>彈簧長度y(mm)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>6</td>
+<td>119</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>8</td>
+<td>145</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>12</td>
+<td>175</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>14</td>
+<td>191</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>18</td>
+<td>204</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>20</td>
+<td>209</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>24</td>
+<td>244</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>26</td>
+<td>233</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>30</td>
+<td>272</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>32</td>
+<td>268</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(\hat{\beta}=401/73=5.5\)</span><br> <span class="math inline">\(\hat{\alpha}=206-5.5\times 19=101.5\)</span></p>
+<p>因此回歸方程式為: <span class="math inline">\(y=101.5+5.5x\)</span><br> <span class="math inline">\(x=20\)</span>時，<span class="math inline">\(\hat{y}=101.5+5.5\times 20=211.5\)</span><br> 備註: 不是預測值剛好是211.5，這其實是平均的結果。</p>
+<h3 id="決定係数決定係數coefficient-of-determination">決定係数/決定係數/Coefficient of Determination</h3>
+<ul>
+<li><strong>総平方和:</strong> <span class="math inline">\(y\)</span>的離散程度<br> <span class="math inline">\(S_T=\sum_{i=1}^{n}(y_i-\bar{y})^2\)</span></li>
+<li><strong>回帰による平方和:</strong> 回歸直線能說明的部分(多次抽樣的樣本平均可以當作母平均) <span class="math inline">\(S_R=\sum_{i=1}^{n}(\hat{y_i}-\bar{y})^2\)</span></li>
+<li><strong>残差平方和:</strong> 回歸直線不能說明的部分(因為實際值沒人知道，所以回歸直線無法說明) <span class="math inline">\(S_e=\sum_{i=1}^{n}(y_i-\hat{y_i})^2\)</span></li>
+</ul>
+<p><span class="math inline">\(S_T=S_R+Se\)</span><br> 決定係數<span class="math inline">\(R^2=\frac{S_R}{S_T}\)</span></p>
+<ul>
+<li>在回歸直線的情況下: <span class="math inline">\(R^2=r^2\)</span> (決定係數平方=相關係數平方)</li>
+<li>二次曲線之類的就沒有上述的特性</li>
+</ul>
+<h3 id="重相関係数多重相關係數multiple-correlation-coefficient">重相関係数/多重相關係數/Multiple Correlation Coefficient</h3>
+<ul>
+<li>由來: 決定係數的正平方根<span class="math inline">\(R\)</span><br></li>
+<li>意義: 觀測值<span class="math inline">\(y_i\)</span>跟預測值<span class="math inline">\(\hat{y_i}\)</span>的相關係數</li>
+</ul>
+]]></content>
+      <categories>
+        <category>統計檢定</category>
+        <category>Ch5</category>
+      </categories>
+      <tags>
+        <tag>統計檢定3級</tag>
+        <tag>回歸直線</tag>
+        <tag>回歸係數</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>yaml筆記</title>
     <url>/2021/03/19/yaml%E7%AD%86%E8%A8%98/</url>
     <content><![CDATA[<p>因為在設定hexo時必須修改一堆.yml檔，想說來了解一下它所以就做了這篇簡短的筆記。</p>
@@ -594,118 +706,6 @@ V(X)&amp;=&amp;(x_1-\mu)^2p_1+(x_2-\mu)^2p_2+...+(x_k-\mu)^2p_k\\\\
       <tags>
         <tag>yaml</tag>
         <tag>yml</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二項分布與正規分布</title>
-    <url>/2021/03/24/Ch7_distributions/</url>
-    <content><![CDATA[<h3 id="二項分布二項式分布binomial-distribution">二項分布/二項式分布/Binomial Distribution</h3>
-<ul>
-<li>二項分布屬於離散型確率分布</li>
-<li>只做一次的二項分布就是伯努利試驗(Bernoulli trial) <span id="more"></span></li>
-</ul>
-<p><span class="math inline">\(P(X=x)=C_{x}^{n}p^x(1-p)^{n-x} \quad (x=0,1,2,...,n)\)</span><br> 1. <span class="math inline">\(C_{x}^{n}\)</span>可以想成從n個裡面取x個當作成功的案例(P=1)。<br> 2. 也可以也想成重複排列。<br></p>
-<p>例: 5個硬幣3正2反的情況為OOOXX，那用1.的想法就是5個硬幣選3個當正面，<br> <span class="math inline">\(C_{3}^{5}=\frac{5 \times 4 \times 3}{3 \times 2 \times 1}\)</span>。用2.的想法就是<span class="math inline">\(\frac{5!}{3!2!}還是=C_{3}^{5}\)</span></p>
-<h4 id="二項分布的性質">二項分布的性質</h4>
-<ul>
-<li>隨機變數<span class="math inline">\(X\)</span>會遵守二項分布<span class="math inline">\(B(n,p)\)</span>
-<ul>
-<li>X的平均<span class="math inline">\(\mu=np\)</span></li>
-<li>X的分散<span class="math inline">\(\sigma^2=np(1-p)\)</span></li>
-<li>X的標準偏差<span class="math inline">\(\sigma=\sqrt{np(1-p)}\)</span></li>
-</ul>
-例題: 隨機變數遵守二項分布B(5, 0.2)，，求P(X=3)、X的平均、分散跟標準偏差。<br>
-<ol type="1">
-<li><span class="math inline">\(P(X=3)=C_3^50.2^3(1-0.2)^2=0.0512\)</span></li>
-<li><span class="math inline">\(\mu =np=5 \times 0.2=1\)</span></li>
-<li><span class="math inline">\(\sigma^2=np(1-p)=5 \times 0.2 \times 0.8=0.8\)</span></li>
-<li><span class="math inline">\(\sigma=\sqrt{0.8}=0.89\)</span></li>
-</ol></li>
-</ul>
-<h3 id="正規分布常態分布高斯分布normal-distribution">正規分布/常態分布(高斯分布)/Normal Distribution</h3>
-<ul>
-<li>正規分布屬於連續型確率分布
-<ul>
-<li>就是說<span class="math inline">\(P(X=x)\)</span>不會剛好有對應的值，而是用範圍表示</li>
-<li>用<span class="math inline">\(f(x) \ge 0\)</span>表示全體分布
-<ul>
-<li><span class="math inline">\(f(x)\)</span>為<span class="math inline">\(X\)</span>的確率密度関数/機率密度函數/Probability Density Function (PDF)</li>
-</ul></li>
-<li>連續型確率変数<span class="math inline">\(X\)</span>在區間<span class="math inline">\([a,b]\)</span>的機率為<span class="math inline">\(P(a \le X \le b)\)</span></li>
-<li><span class="math inline">\(\int_{-\infty }^{\infty}f(x)dx=1\)</span> (全部機率合起來是1)</li>
-<li>在正規分布<span class="math inline">\(N(\mu , \sigma^2)\)</span>下的PDF: <span class="math inline">\(f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-(x-\mu)^2}{2\sigma^2}} \quad (-\infty \le x \le \infty)\)</span></li>
-<li>隨機變數<span class="math inline">\(X\)</span>出現在
-<ul>
-<li><span class="math inline">\((\mu - \sigma,\mu + \sigma)\)</span>的機率為68%</li>
-<li><span class="math inline">\((\mu - 2 \sigma,\mu + 2 \sigma)\)</span>的機率為95%</li>
-<li><span class="math inline">\((\mu - 3 \sigma,\mu + 3 \sigma)\)</span>的機率為99.7%</li>
-</ul></li>
-</ul></li>
-</ul>
-<h4 id="正規分布的性質">正規分布的性質</h4>
-<ul>
-<li>隨機變數<span class="math inline">\(X\)</span>遵守正規分布<span class="math inline">\(N(\mu,\sigma^2)\)</span>時，<span class="math inline">\(Y=aX+b\)</span>則會遵守<span class="math inline">\(N(a\mu+b,a^2\sigma^2)\)</span></li>
-<li>當<span class="math inline">\(Y=aX+b\)</span>的<span class="math inline">\(a=\frac{1}{\sigma}, b=\frac{-\mu}{\sigma}\)</span>時，可以看成<span class="math inline">\(Z=\frac{X-\mu}{\sigma}\)</span>
-<ul>
-<li>也就是說<span class="math inline">\(Z\)</span>會遵守平均0，分散1的正規分布<span class="math inline">\(N(0,1)\)</span> aka 標準正規分布</li>
-</ul></li>
-<li><span class="math inline">\(n\)</span>很大時，遵守<span class="math inline">\(B(n,p)\)</span>的隨機變數<span class="math inline">\(X\)</span>可以視為遵守正規分布<span class="math inline">\(N(np,np(1-p))\)</span></li>
-</ul>
-<h4 id="標準正規分布n01">標準正規分布N(0,1)</h4>
-<p><img src="https://i.imgur.com/fGMcNFA.jpg" /></p>
-<h5 id="用法">用法:</h5>
-<ul>
-<li>假設<span class="math inline">\(u=1.96, Q(1.96)=P(Z\ge 1.96)=0.0250\)</span>
-<ul>
-<li>因為對稱的關係，<span class="math inline">\(P(Z\le -1.96)=P(Z\ge 1.96)=0.0250\)</span></li>
-</ul></li>
-<li><span class="math inline">\(P(Z\le 1.96)=1-P(Z\ge 1.96)=1-0.0250=0.9750\)</span></li>
-<li><span class="math inline">\(P(|Z|\le 1.96)=P(-1.96\le Z\le 1.96)=1-0.0250\times 2=0.950\)</span><br> (就是扣掉最左跟最右的面積)</li>
-</ul>
-<h5 id="常用的數值">常用的數值:</h5>
-<ol type="1">
-<li><span class="math inline">\(P(Z\ge1.28)=0.10\)</span></li>
-<li><span class="math inline">\(P(Z\ge1.645)=0.05\)</span></li>
-<li><span class="math inline">\(P(Z\ge1.96)=0.025\)</span></li>
-<li><span class="math inline">\(P(|Z|\le 1.645)=P(-1.645\le Z\le 1.645)=1-0.05\times2=0.90\)</span></li>
-<li><span class="math inline">\(P(|Z|\le 1.96)=P(-1.96\le Z\le 1.96)=1-0.0250\times 2=0.950\)</span></li>
-</ol>
-<h5 id="一般的正規分布nmusigma可以標準化後轉到n01來算機率">一般的正規分布<span class="math inline">\(N(\mu,\sigma)\)</span>可以標準化後轉到<span class="math inline">\(N(0,1)\)</span>來算機率~</h5>
-<p>例題:隨機變數<span class="math inline">\(X\)</span>遵守正規分布<span class="math inline">\(N(60,5^2)\)</span>時，求:<br></p>
-<ol type="1">
-<li><span class="math inline">\(P(X\ge68)\)</span></li>
-<li><span class="math inline">\(P(X\le65)\)</span></li>
-<li><span class="math inline">\(P(65\le X\le70)\)</span></li>
-</ol>
-<p>Ans:<br></p>
-<ol type="1">
-<li><span class="math inline">\(P(X\ge68)=P(\frac{X-60}{5}\ge \frac{68-60}{5})=P(X\ge1.6)=0.0548\)</span></li>
-<li><span class="math inline">\(P(X\le65)=P(\frac{X-60}{5}\le \frac{65-60}{5})=P(Z\le1)=1-0.1587=0.8413\)</span></li>
-<li><span class="math inline">\(P(65\le X\le70)=P(\frac{65-60}{5}\le Z\le \frac{70-60}{5})=P(1\le Z\le2)\)</span><br> <span class="math inline">\(=P(Z\ge1)-P(Z\ge2)=0.1587-0.0228=0.1359\)</span><br> (大於1小於2的區域就是大於1的區域-大於2的區域～) <img src="https://i.imgur.com/JYC32nq.jpg" /></li>
-</ol>
-<h5 id="二項分布的正規近似">二項分布的正規近似</h5>
-<p>隨機變數<span class="math inline">\(X\)</span>遵守二項分布<span class="math inline">\(B(100,0.2)\)</span>時，用正規分布近似來算:<br></p>
-<ol type="1">
-<li><span class="math inline">\(P(X\ge30)\)</span></li>
-<li><span class="math inline">\(P(X\le28)\)</span></li>
-<li><span class="math inline">\(P(16\le X\le24)\)</span></li>
-</ol>
-<p>首先轉成正規分布<span class="math inline">\(N(np,np(1-p)),\quad (\mu=np, \sigma^2=np(1-p))\)</span><br> <span class="math inline">\(B(100,20)=N(100\times0.2,100\times0.2\times (1-0.2))=N(20,16)=N(20,4^2)\)</span><br></p>
-<ol type="1">
-<li><span class="math inline">\(P(X\ge30)=P(\frac{X-20}{4}\ge \frac{30-20}{4})=P(Z\ge2.5)=0.0062\)</span></li>
-<li><span class="math inline">\(P(X\le28)=P(\frac{X-20}{4}\le \frac{28-20}{4})=P(Z\le2.0)=1-0.0228=0.9772\)</span></li>
-<li><span class="math inline">\(P(16\le X\le24)=P(\frac{16-20}{4}\le Z \le \frac{24-20}{4})\)</span><br> <span class="math inline">\(=P(-1\le Z \le 1)=P(|Z|&lt;=1)=1-2\times0.1587=0.6826\)</span></li>
-</ol>
-]]></content>
-      <categories>
-        <category>統計檢定</category>
-        <category>Ch7</category>
-      </categories>
-      <tags>
-        <tag>二項分布</tag>
-        <tag>常態分布</tag>
-        <tag>正規分布</tag>
-        <tag>標準正規分布</tag>
       </tags>
   </entry>
 </search>
